@@ -39,7 +39,7 @@ you need add require css,js file in your app assets files:
     
 then you can use `social_share_button_tag` helper in views, for example `app/views/posts/show.html.erb`
 
-    <%= social_share_button(@post.title) %>
+    <%= social_share_button_tag(@post.title) %>
     
 ## Demo
 
