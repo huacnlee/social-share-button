@@ -1,0 +1,22 @@
+/*
+
+        Creating a sprite from following images:
+        
+        lib/assets/images/sprites/social-share-button/douban.png (16x16)
+        lib/assets/images/sprites/social-share-button/facebook.png (16x16)
+        lib/assets/images/sprites/social-share-button/twitter.png (16x16)
+        lib/assets/images/sprites/social-share-button/weibo.png (16x16)
+
+        Output files:
+          lib/assets/images/sprites/social-share-button.png
+          lib/assets/stylesheets/social-share-button.scss
+
+        Output size:
+          32x32
+
+
+*/
+.social-share-button-douban { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button.png')) 0px 0px no-repeat }
+.social-share-button-facebook { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button.png')) -16px 0px no-repeat }
+.social-share-button-twitter { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button.png')) 0px -16px no-repeat }
+.social-share-button-weibo { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button.png')) -16px -16px no-repeat }
