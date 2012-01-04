@@ -35,11 +35,15 @@ you need add require css,js file in your app assets files:
     
 `app/assets/stylesheets/application.css`
 
-    /*= require social-share-button
+    *= require social-share-button
     
 then you can use `social_share_button_tag` helper in views, for example `app/views/posts/show.html.erb`
 
     <%= social_share_button_tag(@post.title) %>
+
+and you can custom rel attribute:
+
+    <%= social_share_button_tag(@post.title, :rel => "twipsy") %>
     
 ## Demo
 
