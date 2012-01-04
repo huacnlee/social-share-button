@@ -7,7 +7,7 @@ module SocialShareButton
       html << "<div class='social-share-button' data-title='#{title}'>"
       
       SocialShareButton.config.allow_sites.each do |name|
-        link_title = [I18n.t("social_share_button.share_to"),name.capitalize].join(" ")
+        link_title = [t("social_share_button.share_to"),t("social_share_button.#{name.downcase}")].join("")
         html << link_to("","#", :rel => "nofollow #{rel}", 
                         "data-site" => name, 
                         :class => "social-share-button-#{name}", 

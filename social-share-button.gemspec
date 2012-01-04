@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Jason Lee"]
   s.email       = ["huacnlee@gmail.com"]
   s.homepage    = "http://github.com/huacnlee/social-share-button"
-  s.summary     = %q{Helper for add social share feature in your Rails app. Twitter, Facebook, Weibo, QQ ...}
-  s.description = %q{Helper for add social share feature in your Rails app. Twitter, Facebook, Weibo, QQ ...}
+  s.summary     = %q{Helper for add social share feature in your Rails app. Twitter, Facebook, Weibo, Douban, QQ ...}
+  s.description = %q{Helper for add social share feature in your Rails app. Twitter, Facebook, Weibo, Douban, QQ ...}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
