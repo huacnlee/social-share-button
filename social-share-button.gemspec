@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
+  s.files        = `git ls-files`.split("\n")
+  s.add_development_dependency "rails"
   # s.add_runtime_dependency "rest-client"
 end
