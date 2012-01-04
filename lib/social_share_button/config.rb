@@ -18,5 +18,5 @@ module SocialShareButton
 end
 
 SocialShareButton.configure do |conf|
-  conf.allow_sites = %w(twitter facebook weibo douban)
+  conf.allow_sites = %w(twitter facebook weibo douban qq)
 end
