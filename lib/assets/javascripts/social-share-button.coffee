@@ -3,12 +3,14 @@ window.SocialShareButton =
     window.open(url)
     false
     
-  share : (site, title) ->
+  share : (el) ->
+    site = $(el).data('site')
+    title = encodeURIComponent($(el).parent().data('title'))
+    img = encodeURIComponent($(el).parent().data("img"))
     url = encodeURIComponent(location.href)
-    title = encodeURIComponent(title)
     switch site
       when "weibo"
-        SocialShareButton.openUrl("http://v.t.sina.com.cn/share/share.php?url=#{url}&title=#{title}&content=utf-8")
+        SocialShareButton.openUrl("http://v.t.sina.com.cn/share/share.php?url=#{url}&pic=#{img}&title=#{title}&content=utf-8")
       when "twitter"
         SocialShareButton.openUrl("https://twitter.com/home?status=#{title}: #{url}")
       when "douban"
@@ -16,5 +18,5 @@ window.SocialShareButton =
       when "facebook"
         SocialShareButton.openUrl("http://www.facebook.com/sharer.php?t=#{title}&u=#{url}")
       when "qq"
-        SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}")
+        SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}")
     false
