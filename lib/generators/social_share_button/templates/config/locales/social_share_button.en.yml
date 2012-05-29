@@ -1,6 +1,6 @@
 en:
   social_share_button:
-    share_to: Share to
+    share_to: Share to %{name}
     weibo: Sina Weibo
     twitter: Twitter
     facebook: Facebook
