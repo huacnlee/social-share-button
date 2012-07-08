@@ -10,7 +10,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 
 in your `Gemfile`:
 
-    gem 'social-share-button', '~> 0.0.4'
+    gem 'social-share-button'
     
 an install it:
 
