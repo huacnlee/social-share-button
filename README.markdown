@@ -10,41 +10,55 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 
 in your `Gemfile`:
 
-    gem 'social-share-button'
-    
+```ruby
+gem 'social-share-button'
+```
+
 an install it:
 
-    $ bundle install
-    $ rails generate social_share_button:install
-    
+```bash
+$ bundle install
+$ rails generate social_share_button:install
+```
+
 ## Configure
 
 you can create this content in `config/initializes/social_share_button.rb`:
 
-    SocialShareButton.configure do |config|
-      config.allow_sites = %w(twitter facebook weibo douban)
-    end
+```ruby
+SocialShareButton.configure do |config|
+  config.allow_sites = %w(twitter facebook weibo douban)
+end
+```
     
 ## Usage
 
 you need add require css,js file in your app assets files:
 
-`app/assets/javascripts/application.js`
+`app/assets/javascripts/application.cofee`
 
-    //= require social-share-button
-    
-`app/assets/stylesheets/application.css`
+```
+#= require social-share-button
+```
 
-    *= require social-share-button
-    
+`app/assets/stylesheets/application.scss`
+
+```
+*= require social-share-button
+```
+
 then you can use `social_share_button_tag` helper in views, for example `app/views/posts/show.html.erb`
 
-    <%= social_share_button_tag(@post.title) %>
+```erb
+<%= social_share_button_tag(@post.title) %>
+```
 
 and you can custom rel attribute:
 
-    <%= social_share_button_tag(@post.title, :rel => "twipsy") %>
-    
+```erb
+<%= social_share_button_tag(@post.title, :rel => "twipsy") %>
+```
+
 ## Demo
 
 [http://ruby-china.org/wiki/about](http://ruby-china.org/wiki/about)
