@@ -1,3 +1,7 @@
+== 0.0.6
+
+* Transparent icon fix
+
 == 0.0.5
 
 * Transparent icon
