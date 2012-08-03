@@ -1,3 +1,8 @@
+== 0.0.5
+
+* Transparent icon
+* More site added (Renren,TQQ, Google+, Baidu, Kaixin001)
+
 == 0.0.4
 
 * Add image support for Weibo share.
