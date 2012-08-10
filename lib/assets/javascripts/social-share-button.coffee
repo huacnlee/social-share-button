@@ -29,4 +29,6 @@ window.SocialShareButton =
         SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=#{url}&title=#{title}&description=")
       when "google_plus"
         SocialShareButton.openUrl("https://plus.google.com/share?url=#{url}&t=#{title}")
+      when "google_bookmark"
+        SocialShareButton.openUrl("https://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=#{url}&title=#{title}")
     false

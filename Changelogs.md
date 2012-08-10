@@ -1,3 +1,12 @@
+== 0.0.8
+
+* Add Google Bookmark;
+* Improve Google+ icon.
+
+== 0.0.7
+
+* Douban, TQQ add image support.
+
 == 0.0.6
 
 * Transparent icon fix

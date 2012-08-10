@@ -4,3 +4,4 @@ source "http://rubygems.org"
 gemspec
 
 gem "sprite-factory", "1.4.1"
+gem  "chunky_png"
