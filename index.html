@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Social-share-button by huacnlee</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Social-share-button</h1>
+        <p>Helper for add social share feature in your Rails app. Twitter, Facebook, Weibo, Douban, QQ ...</p>
+
+        <p class="view"><a href="https://github.com/huacnlee/social-share-button">View the Project on GitHub <small>huacnlee/social-share-button</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/huacnlee/social-share-button/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/huacnlee/social-share-button/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/huacnlee/social-share-button">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Social Share Button</h1>
+
+<p>This is a gem to helper you quick create a share feature in you Rails apps.</p>
+
+<h1>Sites list</h1>
+
+<ul>
+<li>Facebook</li>
+<li>Twitter</li>
+<li>Douban</li>
+<li>Google+</li>
+<li>Weibo</li>
+<li>QZone</li>
+<li>Tencent Weibo</li>
+<li>Renren</li>
+<li>Hi Baidu</li>
+<li>Kaixin001</li>
+<li>Google Bookmark</li>
+</ul><h2>Screenshot</h2>
+
+<p><img src="http://l.ruby-china.org/photo/3c9633ac35c56be800ef9592ad594c4b.png" alt="img"></p>
+
+<h2>Install</h2>
+
+<p>In your <code>Gemfile</code>:</p>
+
+<div class="highlight"><pre><span class="n">gem</span> <span class="s1">'social-share-button'</span>
+</pre></div>
+
+<p>And install it:</p>
+
+<div class="highlight"><pre><span class="nv">$ </span>bundle install
+<span class="nv">$ </span>rails generate social_share_button:install
+</pre></div>
+
+<h2>Configure</h2>
+
+<p>You can config <code>config/initializes/social_share_button.rb</code> to choose which site do you want to use:</p>
+
+<div class="highlight"><pre><span class="no">SocialShareButton</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">allow_sites</span> <span class="o">=</span> <span class="sx">%w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu)</span>
+<span class="k">end</span>
+</pre></div>
+
+<h2>Usage</h2>
+
+<p>You need add require css,js file in your app assets files:</p>
+
+<p><code>app/assets/javascripts/application.coffee</code></p>
+
+<pre><code>#= require social-share-button
+</code></pre>
+
+<p><code>app/assets/stylesheets/application.scss</code></p>
+
+<pre><code>*= require social-share-button
+</code></pre>
+
+<p>Then you can use <code>social_share_button_tag</code> helper in views, for example <code>app/views/posts/show.html.erb</code></p>
+
+<div class="highlight"><pre><span class="cp">&lt;%=</span> <span class="n">social_share_button_tag</span><span class="p">(</span><span class="vi">@post</span><span class="o">.</span><span class="n">title</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="x"></span>
+</pre></div>
+
+<p>And you can custom rel attribute:</p>
+
+<div class="highlight"><pre><span class="cp">&lt;%=</span> <span class="n">social_share_button_tag</span><span class="p">(</span><span class="vi">@post</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="ss">:rel</span> <span class="o">=&gt;</span> <span class="s2">"twipsy"</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="x"></span>
+</pre></div>
+
+<h2>Demo</h2>
+
+<p><a href="http://ruby-china.org/wiki/about">http://ruby-china.org/wiki/about</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/huacnlee">huacnlee</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
