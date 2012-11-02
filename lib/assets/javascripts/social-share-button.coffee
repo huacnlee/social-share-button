@@ -8,7 +8,7 @@ window.SocialShareButton =
     title = encodeURIComponent($(el).parent().data('title'))
     img = encodeURIComponent($(el).parent().data("img"))
     url = encodeURIComponent($(el).parent().data("url"))
-    if !url
+    if url.length == 0
       url = encodeURIComponent(location.href)
     switch site
       when "weibo"
