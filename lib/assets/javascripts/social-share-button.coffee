@@ -7,7 +7,9 @@ window.SocialShareButton =
     site = $(el).data('site')
     title = encodeURIComponent($(el).parent().data('title'))
     img = encodeURIComponent($(el).parent().data("img"))
-    url = encodeURIComponent(location.href)
+    url = encodeURIComponent($(el).parent().data("url"))
+    if !url
+      url = encodeURIComponent(location.href)
     switch site
       when "weibo"
         SocialShareButton.openUrl("http://v.t.sina.com.cn/share/share.php?url=#{url}&pic=#{img}&title=#{title}&content=utf-8")
