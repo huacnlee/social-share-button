@@ -73,6 +73,12 @@ And you can custom rel attribute:
 <%= social_share_button_tag(@post.title, :rel => "twipsy") %>
 ```
 
+You can also specify the URL that it links to:
+
+```erb
+<%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar") %>
+```
+
 ## Demo
 
 [http://ruby-china.org/wiki/about](http://ruby-china.org/wiki/about)
