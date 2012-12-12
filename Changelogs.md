@@ -1,3 +1,7 @@
+== 0.0.9
+
+* Allow to give :url option to custom url.
+
 == 0.0.8
 
 * Add Google Bookmark;
