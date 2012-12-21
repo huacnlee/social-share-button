@@ -1,3 +1,7 @@
+== 0.1.0
+
+* Retina support.
+
 == 0.0.9
 
 * Allow to give :url option to custom url.
