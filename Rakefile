@@ -15,6 +15,7 @@ namespace :assets do
       SpriteFactory.run!("lib/assets/images/sprites/#{dir_name}", 
                           :layout => :packed,
                           :output_style => "lib/assets/stylesheets/#{dir_name}.scss", 
+                          :nocomments => true,
                           :selector => ".#{dir_name}-") do |images|
         result = []
         images.each do |img|
