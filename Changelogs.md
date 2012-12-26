@@ -1,3 +1,8 @@
+== 0.1.1
+
+* Add delicious.
+* Use new version of Weibo, Douban share URL to speed up page open.
+
 == 0.1.0
 
 * Retina support.
