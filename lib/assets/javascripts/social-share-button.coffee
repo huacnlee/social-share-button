@@ -12,11 +12,11 @@ window.SocialShareButton =
       url = encodeURIComponent(location.href)
     switch site
       when "weibo"
-        SocialShareButton.openUrl("http://v.t.sina.com.cn/share/share.php?url=#{url}&pic=#{img}&title=#{title}&content=utf-8")
+        SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=#{url}&type=3&pic=#{img}&title=#{title}")
       when "twitter"
         SocialShareButton.openUrl("https://twitter.com/home?status=#{title}: #{url}")
       when "douban"
-        SocialShareButton.openUrl("http://www.douban.com/recommend/?url=#{url}&title=#{title}&image=#{img}")
+        SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}")
       when "facebook"
         SocialShareButton.openUrl("http://www.facebook.com/sharer.php?t=#{title}&u=#{url}")
       when "qq"
@@ -24,7 +24,7 @@ window.SocialShareButton =
       when "tqq"
         SocialShareButton.openUrl("http://share.v.t.qq.com/index.php?c=share&a=index&url=#{url}&title=#{title}&pic=#{img}")
       when "baidu"
-        SocialShareButton.openUrl("http://apps.hi.baidu.com/share/?url=#{url}&title=#{title}&content=")
+        SocialShareButton.openUrl("http://hi.baidu.com/pub/show/share?url=#{url}&title=#{title}&content=")
       when "kaixin001"
         SocialShareButton.openUrl("http://www.kaixin001.com/rest/records.php?url=#{url}&content=#{title}&style=11&pic=#{img}")
       when "renren"
@@ -33,4 +33,6 @@ window.SocialShareButton =
         SocialShareButton.openUrl("https://plus.google.com/share?url=#{url}&t=#{title}")
       when "google_bookmark"
         SocialShareButton.openUrl("https://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=#{url}&title=#{title}")
+      when "delicious"
+        SocialShareButton.openUrl("http://www.delicious.com/save?url=#{url}&title=#{title}&jump=yes&pic=#{img}")
     false
