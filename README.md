@@ -46,6 +46,20 @@ SocialShareButton.configure do |config|
 end
 ```
 
+you can use custom icons adding a custom class for specific social network:
+```ruby
+SocialShareButton.configure do |config|
+  config.allow_sites = %w(twitter facebook google_plus)
+
+  classes = {}
+  classes["twitter"] = "icon-twitter"
+  classes["facebook"] = "icon-facebook"
+  classes["google_plus"] = "icon-google-plus"
+
+  config.custom_class = classes
+end
+```
+
 ## Usage
 
 You need add require css,js file in your app assets files:
