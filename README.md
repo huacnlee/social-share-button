@@ -16,6 +16,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Kaixin001
 * Google Bookmark
 * Delicious
+* Tumblr
 
 ## Screenshot
 
@@ -42,7 +43,7 @@ You can config `config/initializes/social_share_button.rb` to choose which site 
 
 ```ruby
 SocialShareButton.configure do |config|
-  config.allow_sites = %w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu)
+  config.allow_sites = %w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu tumblr)
 end
 ```
 
@@ -79,6 +80,26 @@ You can also specify the URL that it links to:
 ```erb
 <%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar") %>
 ```
+
+For the Tumblr there are an extra settings, prefixed with :'data-*'
+```erb
+<%= social_share_button_tag(@post.title, :image => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/baidu.png", :'data-type' => 'photo') %>
+<%= social_share_button_tag(@post.title, :data-source => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/baidu.png", :'data-type' => 'photo') %>
+```
+Those two above calls are identical.
+Here's the mapping of attributes depending on you data-type parameter
+
+| data-type         | standard  | custom :"data-*" prefixed  |
+--------------------------------------------------------------
+| link (default)    | title     | data-title                 |
+|                   | url       | data-url                   |
+| text              | title     | data-title                 |
+| photo             | title     | data-caption               |
+|                   | image     | data-source                |
+| quote             | title     | data-quote                 |
+|                   |           | data-source                |
+
+
 
 ## Demo
 
