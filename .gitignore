@@ -1,5 +1,6 @@
 .DS_Store
 *.gem
 .bundle
+.rvmrc
 Gemfile.lock
 pkg/*

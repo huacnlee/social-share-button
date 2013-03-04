@@ -5,9 +5,9 @@ window.SocialShareButton =
 
   share : (el) ->
     site = $(el).data('site')
-    title = encodeURIComponent($(el).parent().data('title'))
-    img = encodeURIComponent($(el).parent().data("img"))
-    url = encodeURIComponent($(el).parent().data("url"))
+    title = encodeURIComponent($(el).parent().data('title') || '')
+    img = encodeURIComponent($(el).parent().data("img") || '')
+    url = encodeURIComponent($(el).parent().data("url") || '')
     if url.length == 0
       url = encodeURIComponent(location.href)
     switch site
@@ -35,4 +35,33 @@ window.SocialShareButton =
         SocialShareButton.openUrl("https://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=#{url}&title=#{title}")
       when "delicious"
         SocialShareButton.openUrl("http://www.delicious.com/save?url=#{url}&title=#{title}&jump=yes&pic=#{img}")
+      when "tumblr"
+        get_tumblr_extra = (param) ->
+          cutom_data = $(el).attr("data-#{param}")
+          encodeURIComponent(cutom_data) if cutom_data
+
+        tumblr_params = ->
+          path = get_tumblr_extra('type') || 'link'
+
+          params = switch path
+            when 'text'
+              title = get_tumblr_extra('title') || title
+              "title=#{title}"
+            when 'photo'
+              title = get_tumblr_extra('caption') || title
+              source = get_tumblr_extra('source') || img
+              "caption=#{title}&source=#{source}"
+            when 'quote'
+              quote = get_tumblr_extra('quote') || title
+              source = get_tumblr_extra('source') || ''
+              "quote=#{quote}&source=#{source}"
+            else # actually, it's a link clause
+              title = get_tumblr_extra('title') || title
+              url = get_tumblr_extra('url') || url
+              "name=#{title}&url=#{url}"
+
+
+          "/#{path}?#{params}"
+
+        SocialShareButton.openUrl("http://www.tumblr.com/share#{tumblr_params()}")
     false
