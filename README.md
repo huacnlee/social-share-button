@@ -83,12 +83,13 @@ You can also specify the URL that it links to:
 
 For the Tumblr there are an extra settings, prefixed with :'data-*'
 ```erb
-<%= social_share_button_tag(@post.title, :image => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/baidu.png", :'data-type' => 'photo') %>
-<%= social_share_button_tag(@post.title, :data-source => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/baidu.png", :'data-type' => 'photo') %>
+<%= social_share_button_tag(@post.title, :image => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumbler.png", :'data-type' => 'photo') %>
+<%= social_share_button_tag(@post.title, :'data-source' => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumbler.png", :'data-type' => 'photo') %>
 ```
 Those two above calls are identical.
 Here's the mapping of attributes depending on you data-type parameter
 
+<pre>
 | data-type         | standard  | custom :"data-*" prefixed  |
 --------------------------------------------------------------
 | link (default)    | title     | data-title                 |
@@ -98,7 +99,7 @@ Here's the mapping of attributes depending on you data-type parameter
 |                   | image     | data-source                |
 | quote             | title     | data-quote                 |
 |                   |           | data-source                |
-
+</pre>
 
 
 ## Demo
