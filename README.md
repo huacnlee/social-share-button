@@ -87,7 +87,7 @@ For the Tumblr there are an extra settings, prefixed with :'data-*'
 <%= social_share_button_tag(@post.title, :'data-source' => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumbler.png", :'data-type' => 'photo') %>
 ```
 Those two above calls are identical.
-Here's the mapping of attributes depending on you data-type parameter
+Here are the mapping of attributes depending on you data-type parameter
 
 <pre>
 | data-type         | standard  | custom :"data-*" prefixed  |
