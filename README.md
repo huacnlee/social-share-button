@@ -83,8 +83,8 @@ You can also specify the URL that it links to:
 
 For the Tumblr there are an extra settings, prefixed with :'data-*'
 ```erb
-<%= social_share_button_tag(@post.title, :image => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumbler.png", :'data-type' => 'photo') %>
-<%= social_share_button_tag(@post.title, :'data-source' => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumbler.png", :'data-type' => 'photo') %>
+<%= social_share_button_tag(@post.title, :image => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumblr.png", :'data-type' => 'photo') %>
+<%= social_share_button_tag(@post.title, :'data-source' => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumblr.png", :'data-type' => 'photo') %>
 ```
 Those two above calls are identical.
 Here are the mapping of attributes depending on you data-type parameter
