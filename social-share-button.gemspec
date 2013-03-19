@@ -19,5 +19,7 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   s.files        = `git ls-files`.split("\n")
   s.add_development_dependency "rails"
+  s.add_runtime_dependency "coffee-rails"
+  s.add_runtime_dependency "sass-rails"
   # s.add_runtime_dependency "rest-client"
 end
