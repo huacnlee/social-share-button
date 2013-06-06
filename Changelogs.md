@@ -1,3 +1,7 @@
+== 0.1.3
+
+* Support Rails 4
+
 == 0.1.2
 
 * Add tumblr.
