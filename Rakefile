@@ -6,15 +6,15 @@ ROOT_PATH = File.dirname(__FILE__)
 
 namespace :assets do
   desc 'recreate sprite images and css'
-  task :resprite do 
+  task :resprite do
     SpriteFactory.library = :chunkypng
     SpriteFactory.csspath = "image-path('sprites/$IMAGE')"
-    dirs = Dir.glob("#{ROOT_PATH}/lib/assets/images/sprites/*/")
+    dirs = Dir.glob("#{ROOT_PATH}/app/assets/images/sprites/*/")
     dirs.each do |path|
       dir_name = path.split("/").last
-      SpriteFactory.run!("lib/assets/images/sprites/#{dir_name}", 
+      SpriteFactory.run!("app/assets/images/sprites/#{dir_name}",
                           :layout => :packed,
-                          :output_style => "lib/assets/stylesheets/#{dir_name}.scss", 
+                          :output_style => "app/assets/stylesheets/#{dir_name}.scss",
                           :nocomments => true,
                           :selector => ".#{dir_name}-") do |images|
         result = []
