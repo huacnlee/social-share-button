@@ -28,7 +28,7 @@ window.SocialShareButton =
       when "kaixin001"
         SocialShareButton.openUrl("http://www.kaixin001.com/rest/records.php?url=#{url}&content=#{title}&style=11&pic=#{img}")
       when "renren"
-        SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=#{url}&title=#{title}&description=")
+        SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=#{url}&srcUrl=#{url}&title=#{title}&pic=#{img}&description=")
       when "google_plus"
         SocialShareButton.openUrl("https://plus.google.com/share?url=#{url}&t=#{title}")
       when "google_bookmark"
