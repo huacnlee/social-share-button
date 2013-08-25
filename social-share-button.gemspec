@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  s.files        = Dir.glob("{bin,lib}/**/*")
+  s.files        = Dir.glob("{bin,lib,app/assets/javascripts,app/assets/stylesheets}/**/*")
   s.files       += %w(README.md Changelogs.md)
   s.files       += %w(app/assets/images/sprites/social-share-button.png app/assets/images/sprites/social-share-button@2x.png)
   s.add_development_dependency "rails"

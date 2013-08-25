@@ -1,6 +1,11 @@
+== 0.1.4
+
+* Add Plurk support;
+* Fix Renren share link;
+
 == 0.1.3
 
-* Support Rails 4
+* Support Rails 4;
 
 == 0.1.2
 
