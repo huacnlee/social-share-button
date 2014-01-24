@@ -9,6 +9,7 @@ window.SocialShareButton =
     img = encodeURIComponent($(el).parent().data("img") || '')
     url = encodeURIComponent($(el).parent().data("url") || '')
     description = encodeURIComponent($(el).parent().data("description") || '')
+    source = encodeURIComponent($(el).parent().data("source") || 'social-shared-button')
     if url.length == 0
       url = encodeURIComponent(location.href)
     switch site
@@ -46,6 +47,8 @@ window.SocialShareButton =
         request_url = "http://vk.com/share.php?url=#{url}&title=#{title}&image=#{img}"
         request_url += "&description=#{description}" unless description.empty?
         SocialShareButton.openUrl(request_url)
+      when "linkedin"
+        SocialShareButton.openUrl("http://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}&summary=#{description}&source=#{source}")
       when "tumblr"
         get_tumblr_extra = (param) ->
           cutom_data = $(el).attr("data-#{param}")
