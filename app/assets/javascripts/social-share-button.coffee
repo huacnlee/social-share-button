@@ -8,6 +8,8 @@ window.SocialShareButton =
     title = encodeURIComponent($(el).parent().data('title') || '')
     img = encodeURIComponent($(el).parent().data("img") || '')
     url = encodeURIComponent($(el).parent().data("url") || '')
+    description = encodeURIComponent($(el).parent().data("description") || '')
+    source = encodeURIComponent($(el).parent().data("source") || 'social-shared-button')
     if url.length == 0
       url = encodeURIComponent(location.href)
     switch site
@@ -20,7 +22,9 @@ window.SocialShareButton =
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}")
       when "facebook"
-        SocialShareButton.openUrl("http://www.facebook.com/sharer.php?t=#{title}&u=#{url}")
+        request_url = "http://www.facebook.com/sharer.php?t=#{title}&u=#{url}"
+        request_url = "http://www.facebook.com/sharer.php?s=100&p[url]=#{url}&p[title]=#{title}&p[summary]=#{description}&p[images][0]=#{img}" unless description.empty?
+        SocialShareButton.openUrl(request_url)
       when "qq"
         SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}&pics=#{img}")
       when "tqq"
@@ -39,6 +43,12 @@ window.SocialShareButton =
         SocialShareButton.openUrl("http://www.delicious.com/save?url=#{url}&title=#{title}&jump=yes&pic=#{img}")
       when "plurk"
         SocialShareButton.openUrl("http://www.plurk.com/?status=#{title}: #{url}&qualifier=shares")
+      when "vk"
+        request_url = "http://vk.com/share.php?url=#{url}&title=#{title}&image=#{img}"
+        request_url += "&description=#{description}" unless description.empty?
+        SocialShareButton.openUrl(request_url)
+      when "linkedin"
+        SocialShareButton.openUrl("http://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}&summary=#{description}&source=#{source}")
       when "tumblr"
         get_tumblr_extra = (param) ->
           cutom_data = $(el).attr("data-#{param}")

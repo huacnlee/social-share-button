@@ -1,6 +1,6 @@
-en:
+ru:
   social_share_button:
-    share_to: Share to %{name}
+    share_to: Поделиться через %{name}
     weibo: Sina Weibo
     twitter: Twitter
     facebook: Facebook
@@ -15,6 +15,6 @@ en:
     google_bookmark: Google Bookmark
     tumblr: Tumblr
     plurk: Plurk
-    email: Email
-    vk: Vkontakte
+    email: Почта
+    vk: Вконтакте
     linkedin: LinkedIn
