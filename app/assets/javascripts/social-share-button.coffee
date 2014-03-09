@@ -20,7 +20,7 @@ window.SocialShareButton =
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}")
       when "facebook"
-        SocialShareButton.openUrl("http://www.facebook.com/sharer.php?t=#{title}&u=#{url}")
+        SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}")
       when "qq"
         SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}&pics=#{img}")
       when "tqq"
@@ -32,7 +32,7 @@ window.SocialShareButton =
       when "renren"
         SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=#{url}&srcUrl=#{url}&title=#{title}&pic=#{img}&description=")
       when "google_plus"
-        SocialShareButton.openUrl("https://plus.google.com/share?url=#{url}&t=#{title}")
+        SocialShareButton.openUrl("https://plus.google.com/share?url=#{url}")
       when "google_bookmark"
         SocialShareButton.openUrl("https://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=#{url}&title=#{title}")
       when "delicious"
