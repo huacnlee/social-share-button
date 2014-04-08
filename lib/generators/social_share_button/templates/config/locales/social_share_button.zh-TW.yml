@@ -1,6 +1,6 @@
 'zh-TW':
   social_share_button:
-    share_to: 分享到%{name}
+    share_to: 分享到 %{name}
     weibo: 新浪微博
     twitter: Twitter
     facebook: Facebook
@@ -15,4 +15,5 @@
     google_bookmark: Google 收藏
     tumblr: Tumblr
     plurk: 噗浪
+    pinterest: Pinterest
     email: Email
