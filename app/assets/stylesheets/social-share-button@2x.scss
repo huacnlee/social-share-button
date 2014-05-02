@@ -1,0 +1,52 @@
+/*
+
+        Creating a sprite from following images:
+        
+        app/assets/images/sprites/social-share-button@2x/baidu.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/blogger.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/delicious.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/douban.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/email.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/facebook.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/flickr.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/google_bookmark.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/google_plus.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/kaixin001.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/linkedin.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/pinterest.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/plurk.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/qq.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/renren.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/tqq.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/tumblr.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/twitter.png (32x32)
+        app/assets/images/sprites/social-share-button@2x/weibo.png (32x32)
+
+        Output files:
+          app/assets/images/sprites/social-share-button@2x.png
+          app/assets/stylesheets/social-share-button@2x.scss
+
+        Output size:
+          160x128
+
+
+*/
+.social-share-button-baidu { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) 0px 0px no-repeat }
+.social-share-button-blogger { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -32px 0px no-repeat }
+.social-share-button-delicious { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) 0px -32px no-repeat }
+.social-share-button-douban { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -32px -32px no-repeat }
+.social-share-button-email { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -64px 0px no-repeat }
+.social-share-button-facebook { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -64px -32px no-repeat }
+.social-share-button-flickr { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) 0px -64px no-repeat }
+.social-share-button-google_bookmark { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -32px -64px no-repeat }
+.social-share-button-google_plus { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -64px -64px no-repeat }
+.social-share-button-kaixin001 { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -96px 0px no-repeat }
+.social-share-button-linkedin { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -96px -32px no-repeat }
+.social-share-button-pinterest { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -96px -64px no-repeat }
+.social-share-button-plurk { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) 0px -96px no-repeat }
+.social-share-button-qq { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -32px -96px no-repeat }
+.social-share-button-renren { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -64px -96px no-repeat }
+.social-share-button-tqq { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -96px -96px no-repeat }
+.social-share-button-tumblr { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -128px 0px no-repeat }
+.social-share-button-twitter { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -128px -32px no-repeat }
+.social-share-button-weibo { display:inline-block; width: 32px; height: 32px; background: url(asset_path('sprites/social-share-button@2x.png')) -128px -64px no-repeat }
