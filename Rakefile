@@ -8,7 +8,7 @@ namespace :assets do
   desc 'recreate sprite images and css'
   task :resprite do
     SpriteFactory.library = :chunkypng
-    SpriteFactory.csspath = "image-path('sprites/$IMAGE')"
+    SpriteFactory.csspath = "asset_path('sprites/$IMAGE')"
     dirs = Dir.glob("#{ROOT_PATH}/app/assets/images/sprites/*/")
     dirs.each do |path|
       dir_name = path.split("/").last
