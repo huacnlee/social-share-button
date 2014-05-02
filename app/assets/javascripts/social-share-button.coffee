@@ -41,6 +41,10 @@ window.SocialShareButton =
         SocialShareButton.openUrl("http://www.plurk.com/?status=#{title}: #{url}&qualifier=shares")
       when "pinterest"
         SocialShareButton.openUrl("http://www.pinterest.com/pin/create/button/?url=#{url}&media=#{img}&description=#{title}")
+      when "linkedin"
+        SocialShareButton.openUrl("http://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}")
+      when "blogger"
+        SocialShareButton.openUrl("http://www.blogger.com/blog-this.g?u=#{url}&n=#{title}")
       when "tumblr"
         get_tumblr_extra = (param) ->
           cutom_data = $(el).attr("data-#{param}")
