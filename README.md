@@ -20,6 +20,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Plurk
 * Pinterest
 * Email
+* Add This
 
 ## Screenshot
 
@@ -47,6 +48,15 @@ You can config `config/initializes/social_share_button.rb` to choose which site 
 ```ruby
 SocialShareButton.configure do |config|
   config.allow_sites = %w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu tumblr plurk pinterest email)
+end
+```
+
+Profile id is required if you want to use Add This
+
+```ruby
+SocialShareButton.configure do |config|
+  config.allow_sites = %w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu tumblr plurk pinterest email add_this)
+  config.add_this_profile_id = YOUR_ADD_THIS_PROFILE_ID
 end
 ```
 
