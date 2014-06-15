@@ -10,7 +10,7 @@ module SocialShareButton
     # enable social sites to share, 
     # * default : twitter facebook weibo douban
     # * site support: twitter facebook weibo douban
-    attr_accessor :allow_sites
+    attr_accessor :allow_sites,:add_this_profile_id
     
     def initialize
     end
