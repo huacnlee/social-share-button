@@ -12,6 +12,7 @@
         app/assets/images/sprites/social-share-button/google_plus.png (16x16)
         app/assets/images/sprites/social-share-button/kaixin001.png (16x16)
         app/assets/images/sprites/social-share-button/pinterest.png (16x16)
+        app/assets/images/sprites/social-share-button/linkedin.png (16x16)
         app/assets/images/sprites/social-share-button/plurk.png (16x16)
         app/assets/images/sprites/social-share-button/qq.png (16x16)
         app/assets/images/sprites/social-share-button/renren.png (16x16)
@@ -45,6 +46,7 @@
 .social-share-button-tumblr { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button.png')) -32px -48px no-repeat }
 .social-share-button-twitter { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button.png')) -48px -48px no-repeat }
 .social-share-button-weibo { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button.png')) -64px 0px no-repeat }
+.social-share-button-pinterest { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button.png')) -64px -16px no-repeat }
 
 @media only screen and (-webkit-device-pixel-ratio: 2) {
   .social-share-button-baidu { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button@2x.png')) 0px 0px no-repeat; background-size:80px 64px; }
@@ -64,4 +66,5 @@
   .social-share-button-tumblr { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button@2x.png')) -32px -48px no-repeat; background-size:80px 64px; }
   .social-share-button-twitter { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button@2x.png')) -48px -48px no-repeat; background-size:80px 64px; }
   .social-share-button-weibo { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button@2x.png')) -64px 0px no-repeat; background-size:80px 64px; }
+  .social-share-button-weibo { display:inline-block; width: 16px; height: 16px; background: url(image-path('sprites/social-share-button@2x.png')) -64px -16px no-repeat; background-size:80px 64px; }  
 }
