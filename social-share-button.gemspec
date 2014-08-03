@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.files        = Dir.glob("{bin,lib,app/assets/javascripts,app/assets/stylesheets}/**/*")
   s.files       += %w(README.md Changelogs.md)
   s.files       += %w(app/assets/images/sprites/social-share-button.png app/assets/images/sprites/social-share-button@2x.png)
-  s.add_development_dependency "rails"
+  s.add_development_dependency "rails", '~> 4.1.0'
   s.add_runtime_dependency "coffee-rails"
   s.add_runtime_dependency "sass-rails"
   # s.add_runtime_dependency "rest-client"
