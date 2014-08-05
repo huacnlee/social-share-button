@@ -8,6 +8,7 @@ window.SocialShareButton =
     title = encodeURIComponent($(el).parent().data('title') || '')
     img = encodeURIComponent($(el).parent().data("img") || '')
     url = encodeURIComponent($(el).parent().data("url") || '')
+    via = encodeURIComponent($(el).parent().data("via") || '')
     if url.length == 0
       url = encodeURIComponent(location.href)
     switch site
@@ -16,7 +17,7 @@ window.SocialShareButton =
       when "weibo"
         SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=#{url}&type=3&pic=#{img}&title=#{title}")
       when "twitter"
-        SocialShareButton.openUrl("https://twitter.com/home?status=#{title}: #{url}")
+        SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=#{url}&text=#{title}&via=#{via}")
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}")
       when "facebook"
