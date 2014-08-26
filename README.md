@@ -84,6 +84,11 @@ You can also specify the URL that it links to:
 <%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar") %>
 ```
 
+
+```erb
+<%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page") %>
+```
+
 For the Tumblr there are an extra settings, prefixed with :'data-*'
 ```erb
 <%= social_share_button_tag(@post.title, :image => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumblr.png", :'data-type' => 'photo') %>
