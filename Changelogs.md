@@ -1,3 +1,11 @@
+== 0.1.7
+
+* Add desc support;
+
+== 0.1.5
+
+* Add Tumblr;
+
 == 0.1.4
 
 * Add Plurk support;

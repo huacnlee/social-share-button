@@ -5,10 +5,13 @@ window.SocialShareButton =
 
   share : (el) ->
     site = $(el).data('site')
-    title = encodeURIComponent($(el).parent().data('title') || '')
-    img = encodeURIComponent($(el).parent().data("img") || '')
-    url = encodeURIComponent($(el).parent().data("url") || '')
-    via = encodeURIComponent($(el).parent().data("via") || '')
+    $parent = $(el).parent()
+    title = encodeURIComponent($parent.data('title') || '')
+    img = encodeURIComponent($parent.data("img") || '')
+    url = encodeURIComponent($parent.data("url") || '')
+    via = encodeURIComponent($parent.data("via") || '')
+    desc = encodeURIComponent($parent.data("desc") || ' ')
+    
     if url.length == 0
       url = encodeURIComponent(location.href)
     switch site
@@ -19,19 +22,19 @@ window.SocialShareButton =
       when "twitter"
         SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=#{url}&text=#{title}&via=#{via}")
       when "douban"
-        SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}")
+        SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}&sel=#{desc}")
       when "facebook"
         SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}")
       when "qq"
-        SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}&pics=#{img}")
+        SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}&pics=#{img}&summary=#{desc}")
       when "tqq"
         SocialShareButton.openUrl("http://share.v.t.qq.com/index.php?c=share&a=index&url=#{url}&title=#{title}&pic=#{img}")
       when "baidu"
-        SocialShareButton.openUrl("http://hi.baidu.com/pub/show/share?url=#{url}&title=#{title}&content=")
+        SocialShareButton.openUrl("http://hi.baidu.com/pub/show/share?url=#{url}&title=#{title}&content=#{desc}")
       when "kaixin001"
         SocialShareButton.openUrl("http://www.kaixin001.com/rest/records.php?url=#{url}&content=#{title}&style=11&pic=#{img}")
       when "renren"
-        SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=#{url}&srcUrl=#{url}&title=#{title}&pic=#{img}&description=")
+        SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=#{url}&srcUrl=#{url}&title=#{title}&pic=#{img}&description=#{desc}")
       when "google_plus"
         SocialShareButton.openUrl("https://plus.google.com/share?url=#{url}")
       when "google_bookmark"
