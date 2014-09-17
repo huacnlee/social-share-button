@@ -8,7 +8,10 @@ module SocialShareButton
       html << "<div class='social-share-button' data-title='#{h title}' data-img='#{opts[:image]}' data-url='#{opts[:url]}' data-desc='#{opts[:desc]}'>"
       
       SocialShareButton.config.allow_sites.each do |name|
-        extra_data = opts.select { |k, _| k.to_s.start_with?('data') } if name.eql?('tumblr')
+        extra_data = {}
+        if name.eql?("tumblr") || name.eql?("twitter")
+          extra_data = opts.select { |k, _| k.to_s.start_with?("data") }
+        end
 
         link_title = t "social_share_button.share_to", :name => t("social_share_button.#{name.downcase}")
         html << link_to("","#", {:rel => ["nofollow", rel],
