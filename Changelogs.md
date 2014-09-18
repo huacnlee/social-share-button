@@ -1,3 +1,7 @@
+== 0.1.8
+
+* Allow you custom appKey.
+
 == 0.1.7
 
 * Add desc support;
