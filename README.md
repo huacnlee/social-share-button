@@ -72,6 +72,12 @@ Then you can use `social_share_button_tag` helper in views, for example `app/vie
 <%= social_share_button_tag(@post.title) %>
 ```
 
+For Popup window use this custom popup attribute:
+
+```erb
+<%= social_share_button_tag(@post.title, :popup => "true")
+```
+
 And you can custom rel attribute:
 
 ```erb
