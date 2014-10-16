@@ -16,7 +16,8 @@ window.SocialShareButton =
     via = encodeURIComponent($parent.data("via") || '')
     desc = encodeURIComponent($parent.data("desc") || ' ')
     popup = encodeURIComponent($parent.data("popup") || 'false')
-
+    facebook_appid = encodeURIComponent($parent.data("facebook_appid") || '')
+    redirect_uri = encodeURIComponent($parent.data("redirect_uri") || '')
     if url.length == 0
       url = encodeURIComponent(location.href)
     switch site
@@ -25,11 +26,11 @@ window.SocialShareButton =
       when "weibo"
         SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=#{url}&type=3&pic=#{img}&title=#{title}&appkey=#{appkey}",popup)
       when "twitter"
-        SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=#{url}&text=#{title}&via=#{via}",popup)
+        SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=#{url}&text=#{title}&via=#{via}&media=#{img}",popup)
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}&sel=#{desc}",popup)
       when "facebook"
-        SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}",popup)
+        SocialShareButton.openUrl("https://www.facebook.com/dialog/feed?app_id=#{facebook_appid}&link=#{url}&picture=#{img}&redirect_uri=#{redirect_uri}&name=#{title}",popup)
       when "qq"
         SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}&pics=#{img}&summary=#{desc}&site=#{appkey}", popup)
       when "tqq"
