@@ -78,6 +78,12 @@ For Popup window use this custom popup attribute:
 <%= social_share_button_tag(@post.title, :popup => "true")
 ```
 
+For Using Redirect URl use this custom redirect_url attribute:
+
+```erb
+<%= social_share_button_tag(@post.title, :redirect_url => "http://www.giveursite.com")
+```
+
 And you can custom rel attribute:
 
 ```erb
@@ -95,6 +101,11 @@ You can also specify the URL that it links to:
 <%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page" via: "MyTwitterName") %>
 ```
 
+For the Facebook need to pass developer facebok_appid with custom attributes
+
+```erb
+<%= social_share_button_tag(@post.title, facebook_appid => "123434876786", :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page") %>
+```
 For the Tumblr there are an extra settings, prefixed with :'data-*'
 ```erb
 <%= social_share_button_tag(@post.title, :image => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumblr.png", :'data-type' => 'photo') %>
