@@ -6,7 +6,7 @@ module SocialShareButton
       rel = opts[:rel]
       html = []
       html << "<div class='social-share-button' data-title='#{h title}' data-img='#{opts[:image]}'"
-      html << "data-url='#{opts[:url]}' data-desc='#{opts[:desc]}' data-popup='#{opts[:popup]}'>"
+      html << "data-url='#{opts[:url]}' data-desc='#{opts[:desc]}' data-popup='#{opts[:popup]}' data-via='#{opts[:via]}'>"
       
       SocialShareButton.config.allow_sites.each do |name|
         extra_data = opts.select { |k, _| k.to_s.start_with?('data') } if name.eql?('tumblr')

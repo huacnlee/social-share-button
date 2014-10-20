@@ -92,7 +92,7 @@ You can also specify the URL that it links to:
 
 
 ```erb
-<%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page") %>
+<%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page" via: "MyTwitterName") %>
 ```
 
 For the Tumblr there are an extra settings, prefixed with :'data-*'
