@@ -66,6 +66,14 @@ You need add require css,js file in your app assets files:
 *= require social-share-button
 ```
 
+In Rails 4.1.6 , use `@import` to require files:
+
+`app/assets/stylesheets/application.css.scee
+
+```
+@import "social-share-button";
+```
+
 Then you can use `social_share_button_tag` helper in views, for example `app/views/posts/show.html.erb`
 
 ```erb
