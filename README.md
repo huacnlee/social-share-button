@@ -68,7 +68,7 @@ You need add require css,js file in your app assets files:
 
 In Rails 4.1.6 , use `@import` to require files:
 
-`app/assets/stylesheets/application.css.scee
+`app/assets/stylesheets/application.css.scss`
 
 ```
 @import "social-share-button";
