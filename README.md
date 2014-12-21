@@ -72,6 +72,12 @@ Then you can use `social_share_button_tag` helper in views, for example `app/vie
 <%= social_share_button_tag(@post.title) %>
 ```
 
+Apart from the default title, you can specify the title for the special social network:
+
+```erb
+<%= social_share_button_tag(@post.title, 'data-twitter-title' => 'TheTitleForTwitter') %>
+```
+
 For Popup window use this custom popup attribute:
 
 ```erb
@@ -92,12 +98,6 @@ You can also specify the URL that it links to:
 
 ```erb
 <%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page", via: "MyTwitterName") %>
-```
-
-You can specify the title for the special social network:
-
-```erb
-<%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar", 'data-twitter-title' => 'TheTitleForTwitter') %>
 ```
 
 For the Tumblr there are an extra settings, prefixed with :'data-*'
