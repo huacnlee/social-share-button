@@ -25,7 +25,7 @@ window.SocialShareButton =
       when "weibo"
         SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=#{url}&type=3&pic=#{img}&title=#{title}&appkey=#{appkey}",popup)
       when "twitter"
-        via_str = via.length > 0 ? "&via=#{via}" : ''
+        via_str = "&via=#{via}" if via.length > 0
         SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=#{url}&text=#{title}#{via_str}",popup)
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}&sel=#{desc}",popup)
