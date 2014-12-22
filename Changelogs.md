@@ -1,3 +1,12 @@
+== 0.1.9
+
+* Add `data-via` to allow `{ via: "MyTwitter" }`
+* Add the special title for the corresponding social network by `{ 'data-twitter-title' => 'TheTitleForTwitter'}`
+
+== 0.1.8
+
+* Allow you custom appKey.
+
 == 0.1.7
 
 * Add desc support;
