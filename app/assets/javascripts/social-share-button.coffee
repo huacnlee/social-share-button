@@ -1,7 +1,7 @@
 window.SocialShareButton =
   openUrl : (url,popup) ->
     if popup == "true"
-      window.open(url,'poup','height=500,width=500')
+      window.open(url,'popup','height=500,width=500')
     else
       window.open(url)
       false
