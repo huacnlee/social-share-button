@@ -22,6 +22,8 @@ window.SocialShareButton =
     switch site
       when "email"
         location.href = "mailto:?to=&subject=#{title}&body=#{url}"
+      when "sms"
+        location.href = "sms:?body=#{url}"
       when "weibo"
         SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=#{url}&type=3&pic=#{img}&title=#{title}&appkey=#{appkey}",popup)
       when "twitter"
