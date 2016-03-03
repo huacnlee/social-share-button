@@ -23,7 +23,11 @@ window.SocialShareButton =
       when "email"
         location.href = "mailto:?to=&subject=#{title}&body=#{url}"
       when "sms"
-        location.href = "sms:?body=#{url}"
+        userAgent = navigator.userAgent || navigator.vendor || window.opera
+        if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) || userAgent.match( /Android/i ) )
+          location.href = "sms:?body=#{url}"
+        else
+          alert 'You must be on a mobile device to share via sms.'
       when "weibo"
         SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=#{url}&type=3&pic=#{img}&title=#{title}&appkey=#{appkey}",popup)
       when "twitter"
