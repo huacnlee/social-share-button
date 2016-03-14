@@ -1,3 +1,7 @@
+== 0.1.10
+
+* Add `email` share
+
 == 0.1.9
 
 * Add `data-via` to allow `{ via: "MyTwitter" }`
