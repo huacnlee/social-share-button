@@ -1,3 +1,7 @@
+== 0.2.0
+
+* Added social share with LinkedIn feature.
+
 == 0.1.10
 
 * Add `email` share
