@@ -43,7 +43,7 @@ $ rails generate social_share_button:install
 
 ## Configure
 
-You can config `config/initializes/social_share_button.rb` to choose which site do you want to use:
+You can config `config/initializers/social_share_button.rb` to choose which site do you want to use:
 
 ```ruby
 SocialShareButton.configure do |config|
