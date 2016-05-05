@@ -2,6 +2,8 @@
 
 This is a gem to helper you quick create a share feature in you Rails apps.
 
+[![Gem Version](https://badge.fury.io/rb/social-share-button.svg)](https://badge.fury.io/rb/social-share-button)
+
 # Sites list
 
 * Facebook
