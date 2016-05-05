@@ -1,3 +1,7 @@
+== 0.2.1
+
+* Allow for override of allowed sites in helper.
+
 == 0.2.0
 
 * Added social share with LinkedIn feature.
