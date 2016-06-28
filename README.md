@@ -22,7 +22,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 
 ## Screenshot
 
-<img src="http://l.ruby-china.org/photo/85fa930a43d622ba9653eb0f86df207c.png" width="220px" />
+<img width="290" alt="2016-06-28 4 17 23" src="https://cloud.githubusercontent.com/assets/5518/16408538/d96a23a0-3d4b-11e6-8f28-d02aa4dee994.png">
 
 ## Install
 
