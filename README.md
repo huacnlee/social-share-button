@@ -12,17 +12,13 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Google+
 * Weibo
 * QZone
-* Tencent Weibo
-* Renren
-* Hi Baidu
-* Kaixin001
 * Google Bookmark
 * Delicious
 * Tumblr
-* Plurk
 * Pinterest
 * Email
 * LinkedIn
+* Weichat (Weixin)
 
 ## Screenshot
 
@@ -34,6 +30,12 @@ In your `Gemfile`:
 
 ```ruby
 gem 'social-share-button'
+```
+
+Old version for IE and lower browser support:
+
+```ruby
+gem 'social-share-button', '0.2.1'
 ```
 
 And install it:
@@ -49,7 +51,7 @@ You can config `config/initializers/social_share_button.rb` to choose which site
 
 ```ruby
 SocialShareButton.configure do |config|
-  config.allow_sites = %w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu google_bookmark delicious tumblr plurk pinterest email linkedin)
+  config.allow_sites = %w(twitter facebook weibo)
 end
 ```
 
@@ -89,12 +91,6 @@ Apart from the default title, you can specify the title for the special social n
 <%= social_share_button_tag(@post.title, 'data-twitter-title' => 'TheTitleForTwitter') %>
 ```
 
-For Popup window use this custom popup attribute:
-
-```erb
-<%= social_share_button_tag(@post.title, :popup => "true")
-```
-
 And you can custom rel attribute:
 
 ```erb
@@ -131,6 +127,13 @@ Here are the mapping of attributes depending on you data-type parameter
 |                   |           | data-source                |
 </pre>
 
+## Weichat feature
+
+You must include Weichat API JS file:
+
+```
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+```
 
 ## Demo
 

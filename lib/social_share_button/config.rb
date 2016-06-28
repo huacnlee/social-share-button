@@ -5,13 +5,25 @@ module SocialShareButton
       yield self.config ||= Config.new
     end
   end
-  
+
   class Config
-    # enable social sites to share, 
-    # * default : twitter facebook weibo douban
-    # * site support: twitter facebook weibo douban
+    # enable social sites to share,
+    # * site support:
+    # - twitter
+    # - facebook
+    # - google_plus
+    # - weibo
+    # - qq
+    # - douban
+    # - google_bookmark
+    # - delicious
+    # - tumblr
+    # - pinterest
+    # - email
+    # - linkedin
+    # - weichat
     attr_accessor :allow_sites
-    
+
     def initialize
     end
   end

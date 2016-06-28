@@ -1,3 +1,10 @@
+== 0.3.0
+
+* New SVG icon, new style.
+* Removed `tqq renren kaixin001 baidu plurk` support.
+* Share with popup window.
+* Add Weixin (Weichat).
+
 == 0.2.1
 
 * Allow for override of allowed sites in helper.
