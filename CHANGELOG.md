@@ -1,4 +1,4 @@
-== 0.3.0
+== 0.3.1
 
 * New SVG icon, new style.
 * Removed `tqq renren kaixin001 baidu plurk` support.
