@@ -127,6 +127,24 @@ Here are the mapping of attributes depending on you data-type parameter
 |                   |           | data-source                |
 </pre>
 
+## How to change icon size?
+
+Yes, you can override social-share-button base css to change the icon size.
+
+In you `app/assets/stylesheets/application.scss`:
+
+```scss
+$size: 24px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}
+```
+
 ## Weichat feature
 
 You must include Weichat API JS file:
