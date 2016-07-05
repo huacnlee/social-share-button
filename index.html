@@ -1,38 +1,33 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Social-share-button by huacnlee</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <title>social-share-button by huacnlee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Social-share-button</h1>
-        <p>Helper for add social share feature in your Rails app. Twitter, Facebook, Weibo, Douban, QQ ...</p>
+    <section class="page-header">
+      <h1 class="project-name">social-share-button</h1>
+      <h2 class="project-tagline">Helper for add social share feature in your Rails app. Twitter, Facebook, Weibo, Douban, QQ ...</h2>
+      <a href="https://github.com/huacnlee/social-share-button" class="btn">View on GitHub</a>
+      <a href="https://github.com/huacnlee/social-share-button/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/huacnlee/social-share-button/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <p class="view"><a href="https://github.com/huacnlee/social-share-button">View the Project on GitHub <small>huacnlee/social-share-button</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/huacnlee/social-share-button/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/huacnlee/social-share-button/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/huacnlee/social-share-button">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>Social Share Button</h1>
+    <section class="main-content">
+      <h1>
+<a id="social-share-button" class="anchor" href="#social-share-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Social Share Button</h1>
 
 <p>This is a gem to helper you quick create a share feature in you Rails apps.</p>
 
-<h1>Sites list</h1>
+<p><a href="https://badge.fury.io/rb/social-share-button"><img src="https://badge.fury.io/rb/social-share-button.svg" alt="Gem Version"></a></p>
+
+<h1>
+<a id="sites-list" class="anchor" href="#sites-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sites list</h1>
 
 <ul>
 <li>Facebook</li>
@@ -41,38 +36,47 @@
 <li>Google+</li>
 <li>Weibo</li>
 <li>QZone</li>
-<li>Tencent Weibo</li>
-<li>Renren</li>
-<li>Hi Baidu</li>
-<li>Kaixin001</li>
 <li>Google Bookmark</li>
-</ul><h2>Screenshot</h2>
+<li>Delicious</li>
+<li>Tumblr</li>
+<li>Pinterest</li>
+<li>Email</li>
+<li>LinkedIn</li>
+<li>Weichat (Weixin)</li>
+</ul>
 
-<p><img src="http://l.ruby-china.org/photo/3c9633ac35c56be800ef9592ad594c4b.png" alt="img"></p>
+<h2>
+<a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Screenshot</h2>
 
-<h2>Install</h2>
+<p><img width="290" alt="2016-06-28 4 17 23" src="https://cloud.githubusercontent.com/assets/5518/16408538/d96a23a0-3d4b-11e6-8f28-d02aa4dee994.png"></p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
 
 <p>In your <code>Gemfile</code>:</p>
 
-<div class="highlight"><pre><span class="n">gem</span> <span class="s1">'social-share-button'</span>
-</pre></div>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>social-share-button<span class="pl-pds">'</span></span></pre></div>
+
+<p>Old version for IE and lower browser support:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>social-share-button<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>0.2.1<span class="pl-pds">'</span></span></pre></div>
 
 <p>And install it:</p>
 
-<div class="highlight"><pre><span class="nv">$ </span>bundle install
-<span class="nv">$ </span>rails generate social_share_button:install
-</pre></div>
+<div class="highlight highlight-source-shell"><pre>$ bundle install
+$ rails generate social_share_button:install</pre></div>
 
-<h2>Configure</h2>
+<h2>
+<a id="configure" class="anchor" href="#configure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configure</h2>
 
-<p>You can config <code>config/initializes/social_share_button.rb</code> to choose which site do you want to use:</p>
+<p>You can config <code>config/initializers/social_share_button.rb</code> to choose which site do you want to use:</p>
 
-<div class="highlight"><pre><span class="no">SocialShareButton</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
-  <span class="n">config</span><span class="o">.</span><span class="n">allow_sites</span> <span class="o">=</span> <span class="sx">%w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu)</span>
-<span class="k">end</span>
-</pre></div>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c1">SocialShareButton</span>.configure <span class="pl-k">do </span>|<span class="pl-smi">config</span>|
+  config.allow_sites <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">%w(</span>twitter facebook weibo<span class="pl-pds">)</span></span>
+<span class="pl-k">end</span></pre></div>
 
-<h2>Usage</h2>
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>You need add require css,js file in your app assets files:</p>
 
@@ -86,26 +90,89 @@
 <pre><code>*= require social-share-button
 </code></pre>
 
+<p>In Rails 4.1.6 , use <code>@import</code> to require files:</p>
+
+<p><code>app/assets/stylesheets/application.css.scss</code></p>
+
+<pre><code>@import "social-share-button";
+</code></pre>
+
 <p>Then you can use <code>social_share_button_tag</code> helper in views, for example <code>app/views/posts/show.html.erb</code></p>
 
-<div class="highlight"><pre><span class="cp">&lt;%=</span> <span class="n">social_share_button_tag</span><span class="p">(</span><span class="vi">@post</span><span class="o">.</span><span class="n">title</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="x"></span>
-</pre></div>
+<div class="highlight highlight-text-html-erb"><pre><span class="pl-pse">&lt;%=</span><span class="pl-s1"> social_share_button_tag(<span class="pl-smi">@post</span>.title) </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span></pre></div>
+
+<p>Apart from the default title, you can specify the title for the special social network:</p>
+
+<div class="highlight highlight-text-html-erb"><pre><span class="pl-pse">&lt;%=</span><span class="pl-s1"> social_share_button_tag(<span class="pl-smi">@post</span>.title, <span class="pl-s"><span class="pl-pds">'</span>data-twitter-title<span class="pl-pds">'</span></span> =&gt; <span class="pl-s"><span class="pl-pds">'</span>TheTitleForTwitter<span class="pl-pds">'</span></span>) </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span></pre></div>
 
 <p>And you can custom rel attribute:</p>
 
-<div class="highlight"><pre><span class="cp">&lt;%=</span> <span class="n">social_share_button_tag</span><span class="p">(</span><span class="vi">@post</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="ss">:rel</span> <span class="o">=&gt;</span> <span class="s2">"twipsy"</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="x"></span>
-</pre></div>
+<div class="highlight highlight-text-html-erb"><pre><span class="pl-pse">&lt;%=</span><span class="pl-s1"> social_share_button_tag(<span class="pl-smi">@post</span>.title, <span class="pl-c1">:rel</span> =&gt; <span class="pl-s"><span class="pl-pds">"</span>twipsy<span class="pl-pds">"</span></span>) </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span></pre></div>
 
-<h2>Demo</h2>
+<p>You can also specify the URL that it links to:</p>
+
+<div class="highlight highlight-text-html-erb"><pre><span class="pl-pse">&lt;%=</span><span class="pl-s1"> social_share_button_tag(<span class="pl-smi">@post</span>.title, <span class="pl-c1">:url</span> =&gt; <span class="pl-s"><span class="pl-pds">"</span>http://myapp.com/foo/bar<span class="pl-pds">"</span></span>) </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span></pre></div>
+
+<div class="highlight highlight-text-html-erb"><pre><span class="pl-pse">&lt;%=</span><span class="pl-s1"> social_share_button_tag(<span class="pl-smi">@post</span>.title, <span class="pl-c1">:url</span> =&gt; <span class="pl-s"><span class="pl-pds">"</span>http://myapp.com/foo/bar<span class="pl-pds">"</span></span>, <span class="pl-c1">:image</span> =&gt; <span class="pl-s"><span class="pl-pds">"</span>http://foo.bar/images/a.jpg<span class="pl-pds">"</span></span>, <span class="pl-c1">desc:</span> <span class="pl-s"><span class="pl-pds">"</span>The summary of page<span class="pl-pds">"</span></span>, <span class="pl-c1">via:</span> <span class="pl-s"><span class="pl-pds">"</span>MyTwitterName<span class="pl-pds">"</span></span>) </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span></pre></div>
+
+<p>For the Tumblr there are an extra settings, prefixed with :'data-*'</p>
+
+<div class="highlight highlight-text-html-erb"><pre><span class="pl-pse">&lt;%=</span><span class="pl-s1"> social_share_button_tag(<span class="pl-smi">@post</span>.title, <span class="pl-c1">:image</span> =&gt; <span class="pl-s"><span class="pl-pds">"</span>https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumblr.png<span class="pl-pds">"</span></span>, <span class="pl-c1">:'data-type'</span> =&gt; <span class="pl-s"><span class="pl-pds">'</span>photo<span class="pl-pds">'</span></span>) </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span>
+<span class="pl-pse">&lt;%=</span><span class="pl-s1"> social_share_button_tag(<span class="pl-smi">@post</span>.title, <span class="pl-c1">:'data-source'</span> =&gt; <span class="pl-s"><span class="pl-pds">"</span>https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumblr.png<span class="pl-pds">"</span></span>, <span class="pl-c1">:'data-type'</span> =&gt; <span class="pl-s"><span class="pl-pds">'</span>photo<span class="pl-pds">'</span></span>) </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span></pre></div>
+
+<p>Those two above calls are identical.
+Here are the mapping of attributes depending on you data-type parameter</p>
+
+<pre>
+| data-type         | standard  | custom :"data-*" prefixed  |
+--------------------------------------------------------------
+| link (default)    | title     | data-title                 |
+|                   | url       | data-url                   |
+| text              | title     | data-title                 |
+| photo             | title     | data-caption               |
+|                   | image     | data-source                |
+| quote             | title     | data-quote                 |
+|                   |           | data-source                |
+</pre>
+
+<h2>
+<a id="how-to-change-icon-size" class="anchor" href="#how-to-change-icon-size" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to change icon size?</h2>
+
+<p>Yes, you can override social-share-button base css to change the icon size.</p>
+
+<p>In you <code>app/assets/stylesheets/application.scss</code>:</p>
+
+<div class="highlight highlight-source-scss"><pre><span class="pl-smi">$size</span>: <span class="pl-c1">24</span><span class="pl-k">px</span>;
+
+<span class="pl-e">.social-share-button</span> {
+  <span class="pl-e">.ssb-icon</span> {
+    <span class="pl-c1"><span class="pl-c1">background-size</span></span>: <span class="pl-smi">$size</span> <span class="pl-smi">$size</span>;
+    <span class="pl-c1"><span class="pl-c1">height</span></span>: <span class="pl-smi">$size</span>;
+    <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-smi">$size</span>;
+  }
+}</pre></div>
+
+<h2>
+<a id="weichat-feature" class="anchor" href="#weichat-feature" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Weichat feature</h2>
+
+<p>You must include Weichat API JS file:</p>
+
+<pre><code>&lt;script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h2>
 
 <p><a href="http://ruby-china.org/wiki/about">http://ruby-china.org/wiki/about</a></p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/huacnlee">huacnlee</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/huacnlee/social-share-button">social-share-button</a> is maintained by <a href="https://github.com/huacnlee">huacnlee</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+
+    </section>
+
+  
   </body>
 </html>
