@@ -14,4 +14,6 @@ module SocialShareButton
   end
 end
 
-ActionView::Base.send :include, SocialShareButton::Helper
+ActiveSupport.on_load(:action_view) do
+  include SocialShareButton::Helper
+end
