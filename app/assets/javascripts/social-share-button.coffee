@@ -43,6 +43,8 @@ window.SocialShareButton =
         SocialShareButton.openUrl("http://www.pinterest.com/pin/create/button/?url=#{url}&media=#{img}&description=#{title}")
       when "linkedin"
         SocialShareButton.openUrl("https://www.linkedin.com/shareArticle?url=#{url}&title=#{title}")
+      when "vkontakte"
+        SocialShareButton.openUrl("http://vk.com/share.php?url=#{url}&title=#{title}&image=#{img}")
       when "weixin"
         if wx == undefined
           console.log "You must require weichat API js by your self. https://res.wx.qq.com/open/js/jweixin-1.0.0.js"
