@@ -34,10 +34,9 @@ window.SocialShareButton =
           SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}", 555, 400)
         else
           FB.ui({
-            method: 'feed',
-            link: $parent.data("url"),
+            method: 'share',
+            href: $parent.data("url"),
             caption: $parent.data("title"),
-            display: 'popup',
             picture: $parent.data("img"),
             description: $parent.data("desk")
           })
