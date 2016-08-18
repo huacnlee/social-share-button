@@ -30,16 +30,7 @@ window.SocialShareButton =
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}&sel=#{desc}", 770, 470)
       when "facebook"
-        if FB == undefined # Without modern facebook JS plugin
-          SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}", 555, 400)
-        else
-          FB.ui({
-            method: 'share',
-            href: $parent.data("url"),
-            caption: $parent.data("title"),
-            picture: $parent.data("img"),
-            description: $parent.data("desk")
-          })
+        SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}", 555, 400)
       when "qq"
         SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}&pics=#{img}&summary=#{desc}&site=#{appkey}")
       when "google_plus"
