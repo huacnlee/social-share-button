@@ -42,7 +42,7 @@ window.SocialShareButton =
       when "pinterest"
         SocialShareButton.openUrl("http://www.pinterest.com/pin/create/button/?url=#{url}&media=#{img}&description=#{title}")
       when "linkedin"
-        SocialShareButton.openUrl("https://www.linkedin.com/shareArticle?url=#{url}&title=#{title}")
+        SocialShareButton.openUrl("https://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}&summary=#{desc}")
       when "vkontakte"
         SocialShareButton.openUrl("http://vk.com/share.php?url=#{url}&title=#{title}&image=#{img}")
       when "weixin"
