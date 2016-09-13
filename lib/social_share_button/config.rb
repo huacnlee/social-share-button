@@ -23,6 +23,7 @@ module SocialShareButton
     # - linkedin
     # - weichat
     # - vkontakte
+    # - whatsapp
     attr_accessor :allow_sites
 
     def initialize

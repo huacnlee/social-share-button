@@ -20,6 +20,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * LinkedIn
 * Weichat (Weixin)
 * Vkontakte
+* Whatsapp
 
 ## Screenshot
 

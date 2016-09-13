@@ -9,6 +9,7 @@ window.SocialShareButton =
   share : (el) ->
     site = $(el).data('site')
     appkey = $(el).data('appkey') || ''
+    action = $(el).data('action') || ''
     $parent = $(el).parent()
     title = encodeURIComponent($(el).data(site + '-title') || $parent.data('title') || '')
     img = encodeURIComponent($parent.data("img") || '')
@@ -45,6 +46,9 @@ window.SocialShareButton =
         SocialShareButton.openUrl("https://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}&summary=#{desc}")
       when "vkontakte"
         SocialShareButton.openUrl("http://vk.com/share.php?url=#{url}&title=#{title}&image=#{img}")
+      when "whatsapp"
+        action = 'share/whatsapp/share'
+        location.href = "whatsapp://send?text=#{title} #{url}"
       when "weixin"
         if wx == undefined
           console.log "You must require weichat API js by your self. https://res.wx.qq.com/open/js/jweixin-1.0.0.js"
