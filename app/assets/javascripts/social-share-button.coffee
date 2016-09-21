@@ -45,15 +45,12 @@ window.SocialShareButton =
         SocialShareButton.openUrl("https://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}&summary=#{desc}")
       when "vkontakte"
         SocialShareButton.openUrl("http://vk.com/share.php?url=#{url}&title=#{title}&image=#{img}")
-      when "weixin"
-        if wx == undefined
-          console.log "You must require weichat API js by your self. https://res.wx.qq.com/open/js/jweixin-1.0.0.js"
-          return false
-        opts =
-          title: title
-          link: url
-          imgUrl: img
-        wx.onMenuShareTimeline(opts)
+      when "weichat"
+        throw new Error("You should require social-share-button/weichat to your application.js") unless window.SocialShareWeichatButton
+        window.SocialShareWeichatButton.qrcode
+          header: $(el).attr('title')
+          footer: $(el).data('weichat-footer')
+
       when "tumblr"
         get_tumblr_extra = (param) ->
           cutom_data = $(el).attr("data-#{param}")
