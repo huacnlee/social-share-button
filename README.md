@@ -64,6 +64,7 @@ You need add require css,js file in your app assets files:
 
 ```
 #= require social-share-button
+#= require social_share_button/weichat # if you need use Weichat
 ```
 
 `app/assets/stylesheets/application.scss`
@@ -144,14 +145,6 @@ $size: 24px;
     width: $size;
   }
 }
-```
-
-## Weichat feature
-
-You must include Weichat API JS file:
-
-```
-<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 ```
 
 ## Demo

@@ -1,3 +1,11 @@
+== 0.4.0
+
+* QRCode for Wechat share.
+
+== 0.3.4
+
+* Add linkedin summary parameter (#89)
+
 == 0.3.1
 
 * New SVG icon, new style.
