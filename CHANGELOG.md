@@ -1,6 +1,10 @@
+== 0.5.0
+
+* Fix QRCode WeChat typo error.
+
 == 0.4.0
 
-* QRCode for Wechat share.
+* QRCode for WeChat share.
 
 == 0.3.4
 
@@ -11,7 +15,7 @@
 * New SVG icon, new style.
 * Removed `tqq renren kaixin001 baidu plurk` support.
 * Share with popup window.
-* Add Weixin (Weichat).
+* Add Weixin (WeChat).
 
 == 0.2.1
 

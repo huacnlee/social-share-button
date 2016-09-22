@@ -45,11 +45,11 @@ window.SocialShareButton =
         SocialShareButton.openUrl("https://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}&summary=#{desc}")
       when "vkontakte"
         SocialShareButton.openUrl("http://vk.com/share.php?url=#{url}&title=#{title}&image=#{img}")
-      when "weichat"
-        throw new Error("You should require social-share-button/weichat to your application.js") unless window.SocialShareWeichatButton
-        window.SocialShareWeichatButton.qrcode
+      when "wechat"
+        throw new Error("You should require social-share-button/wechat to your application.js") unless window.SocialShareWeChatButton
+        window.SocialShareWeChatButton.qrcode
           header: $(el).attr('title')
-          footer: $(el).data('weichat-footer')
+          footer: $(el).data('wechat-footer')
 
       when "tumblr"
         get_tumblr_extra = (param) ->

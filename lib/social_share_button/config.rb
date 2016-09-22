@@ -21,7 +21,7 @@ module SocialShareButton
     # - pinterest
     # - email
     # - linkedin
-    # - weichat
+    # - wechat
     # - vkontakte
     attr_accessor :allow_sites
 
