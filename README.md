@@ -18,7 +18,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Pinterest
 * Email
 * LinkedIn
-* Weichat (Weixin)
+* WeChat (Weixin)
 * Vkontakte
 
 ## Screenshot
@@ -64,7 +64,7 @@ You need add require css,js file in your app assets files:
 
 ```
 #= require social-share-button
-#= require social_share_button/weichat # if you need use Weichat
+#= require social_share_button/wechat # if you need use WeChat
 ```
 
 `app/assets/stylesheets/application.scss`

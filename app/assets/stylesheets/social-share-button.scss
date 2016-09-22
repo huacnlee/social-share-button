@@ -11,14 +11,14 @@ $size: 18px;
   }
 
   @each $site in twitter, facebook, google_bookmark, google_plus, weibo, qq,
-                 delicious, linkedin, tumblr, pinterest, douban, weichat, vkontakte, email {
+                 delicious, linkedin, tumblr, pinterest, douban, wechat, vkontakte, email {
     .ssb-#{$site} {
       background-image: image-url('social-share-button/#{$site}.svg');
     }
   }
 }
 
-.ss-weichat-dialog {
+.ss-wechat-dialog {
   width: 270px;
   height: 300px;
   position: fixed;
@@ -29,12 +29,12 @@ $size: 18px;
   font-size: 12px;
   line-height: 1.2em;
 
-  .weichat-dialog-qr {
+  .wechat-dialog-qr {
     text-align: center;
     margin: 10px 0px;
   }
 
-  .weichat-popup-close {
+  .wechat-popup-close {
     width: 16px;
     height: 16px;
     position: absolute;
@@ -45,7 +45,7 @@ $size: 18px;
     font-size: 16px;
   }
 
-  .weichat-popup-footer {
+  .wechat-popup-footer {
     text-align: left;
     line-height: 22px;
     color: #666;
