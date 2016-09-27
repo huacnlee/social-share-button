@@ -1,3 +1,7 @@
+== 0.6.0
+
+* Add support for xing social network (#95)
+
 == 0.5.0
 
 * Fix QRCode WeChat typo error.
