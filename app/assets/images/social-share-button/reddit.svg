@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="256" height="256" viewBox="0, 0, 256, 256">
+  <g id="tumblr">
+    <path d="M40,0 L216,0 C238.091,0 256,17.909 256,40 L256,216 C256,238.091 238.091,256 216,256 L40,256 C17.909,256 0,238.091 0,216 L0,40 C0,17.909 17.909,0 40,0 z" fill="#FF4200" id="bg"/>
+    <text transform="matrix(1, 0, 0, 1, 128, 128)" id="icon">
+      <tspan x="-112" y="76" font-family="FontAwesome" font-size="224" fill="#FFFFFF"></tspan>
+    </text>
+  </g>
+</svg>

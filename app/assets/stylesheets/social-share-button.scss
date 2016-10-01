@@ -11,7 +11,7 @@ $size: 18px;
   }
 
   @each $site in twitter, facebook, google_bookmark, google_plus, weibo, qq,
-                 delicious, linkedin, tumblr, pinterest, douban, wechat, vkontakte, xing, email {
+                 delicious, linkedin, tumblr, pinterest, douban, wechat, vkontakte, xing, email, reddit {
     .ssb-#{$site} {
       background-image: image-url('social-share-button/#{$site}.svg');
     }
