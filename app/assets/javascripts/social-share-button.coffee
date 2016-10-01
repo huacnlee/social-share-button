@@ -82,7 +82,4 @@ window.SocialShareButton =
           "/#{path}?#{params}"
 
         SocialShareButton.openUrl("http://www.tumblr.com/share#{tumblr_params()}")
-      
-      when "reddit"
-        SocialShareButton.openUrl("http://www.reddit.com/submit?url=#{url}&newwindow=1", 555, 400)
     false
