@@ -21,6 +21,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * WeChat (Weixin)
 * Vkontakte
 * Xing
+* Reddit
 
 ## Screenshot
 
