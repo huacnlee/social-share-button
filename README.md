@@ -22,6 +22,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Vkontakte
 * Xing
 * Reddit
+* Hacker News (Y Combinator)
 
 ## Screenshot
 

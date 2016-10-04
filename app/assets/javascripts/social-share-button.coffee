@@ -85,4 +85,6 @@ window.SocialShareButton =
       
       when "reddit"
         SocialShareButton.openUrl("http://www.reddit.com/submit?url=#{url}&newwindow=1", 555, 400)
+      when "hacker_news"
+        SocialShareButton.openUrl("http://news.ycombinator.com/submitlink?u=#{url}&t=#{title}", 770, 500)
     false
