@@ -1,3 +1,8 @@
+== 0.7.0
+
+* Add support for Reddit (#98)
+* Use ActiveSupport.on_load looks to inject behavior into ActionView::Base (#82)
+
 == 0.6.0
 
 * Add support for xing social network (#95)
