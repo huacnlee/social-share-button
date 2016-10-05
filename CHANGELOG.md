@@ -1,3 +1,7 @@
+== 0.8.0
+
+* Add support for Hacker News (#99)
+
 == 0.7.0
 
 * Add support for Reddit (#98)
