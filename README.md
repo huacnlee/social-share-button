@@ -67,7 +67,7 @@ You need add require css,js file in your app assets files:
 
 ```
 #= require social-share-button
-#= require social_share_button/wechat # if you need use WeChat
+#= require social-share-button/wechat # if you need use WeChat
 ```
 
 `app/assets/stylesheets/application.scss`
