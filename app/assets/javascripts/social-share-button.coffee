@@ -52,6 +52,7 @@ window.SocialShareButton =
         window.SocialShareWeChatButton.qrcode
           header: $(el).attr('title')
           footer: $(el).data('wechat-footer')
+          url: $parent.data("url")
 
       when "tumblr"
         get_tumblr_extra = (param) ->
