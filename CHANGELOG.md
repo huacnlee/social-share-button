@@ -1,3 +1,7 @@
+== 0.8.1
+
+* Fix wechat typo. (#103)
+
 == 0.8.0
 
 * Add support for Hacker News (#99)

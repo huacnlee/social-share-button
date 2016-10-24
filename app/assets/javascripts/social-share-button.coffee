@@ -50,9 +50,9 @@ window.SocialShareButton =
       when "wechat"
         throw new Error("You should require social-share-button/wechat to your application.js") unless window.SocialShareWeChatButton
         window.SocialShareWeChatButton.qrcode
-          header: $(el).attr('title')
+          url: url
+          header: title
           footer: $(el).data('wechat-footer')
-          url: $parent.data("url")
 
       when "tumblr"
         get_tumblr_extra = (param) ->
@@ -83,7 +83,7 @@ window.SocialShareButton =
           "/#{path}?#{params}"
 
         SocialShareButton.openUrl("http://www.tumblr.com/share#{tumblr_params()}")
-      
+
       when "reddit"
         SocialShareButton.openUrl("http://www.reddit.com/submit?url=#{url}&newwindow=1", 555, 400)
       when "hacker_news"
