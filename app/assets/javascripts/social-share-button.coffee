@@ -16,6 +16,11 @@ window.SocialShareButton =
     via = encodeURIComponent($parent.data("via") || '')
     desc = encodeURIComponent($parent.data("desc") || ' ')
 
+    # tracking click events if google analytics enabled
+    ga = window[window['GoogleAnalyticsObject'] || 'ga']
+    if typeof ga == 'function'
+      ga('send', 'event', 'Social Share Button', 'click', site)
+
     if url.length == 0
       url = encodeURIComponent(location.href)
     switch site
