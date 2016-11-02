@@ -10,7 +10,7 @@ window.SocialShareButton =
     site = $(el).data('site')
     appkey = $(el).data('appkey') || ''
     $parent = $(el).parent()
-    title = encodeURIComponent($(el).data(site + '-title') || $parent.data('title') || $('meta[property="og:title"]').attr('content') || '')
+    title = encodeURIComponent($parent.data('title') || $('meta[property="og:title"]').attr('content') || $(el).data(site + '-title') || '')
     img = encodeURIComponent($parent.data("img") || $('meta[property="og:image"]').attr('content') || '')
     url = encodeURIComponent($parent.data("url") || $('meta[property="og:url"]').attr('content') || '')
     via = encodeURIComponent($parent.data("via") || '')
