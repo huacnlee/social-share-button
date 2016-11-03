@@ -1,3 +1,7 @@
+== 0.8.2
+
+* Add google analytics code to track share button click events. (#106)
+
 == 0.8.1
 
 * Fix wechat typo. (#103)
