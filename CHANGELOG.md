@@ -1,3 +1,8 @@
+== 0.8.3
+
+* Fix share to wechat title.
+* Fix default I18n files as Rails Engine way, now you do not need copy them in to you config/locales (You can delete them).
+
 == 0.8.2
 
 * Add google analytics code to track share button click events. (#106)
