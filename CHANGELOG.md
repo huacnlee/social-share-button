@@ -1,4 +1,4 @@
-== 0.8.3
+== 0.8.4
 
 * Fix share to wechat title.
 * Fix default I18n files as Rails Engine way, now you do not need copy them in to you config/locales (You can delete them).
