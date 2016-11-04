@@ -20,26 +20,30 @@ $size: 18px;
 }
 
 .ss-wechat-dialog {
-  width: 270px;
-  height: 300px;
+  width: 300px;
   position: fixed;
   background: #fff;
-  padding: 10px;
-  border: solid 1px #ddd;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
   z-index: 11001;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2em;
+
+  .wechat-popup-header {
+    font-weight: bold;
+  }
 
   .wechat-dialog-qr {
     text-align: center;
-    margin: 10px 0px;
+    margin: 25px 0px;
   }
 
   .wechat-popup-close {
     width: 16px;
     height: 16px;
     position: absolute;
-    right: 0px;
+    right: 10px;
     top: 10px;
     color: #999;
     text-decoration: none;

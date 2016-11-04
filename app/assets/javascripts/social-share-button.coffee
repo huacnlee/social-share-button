@@ -56,7 +56,7 @@ window.SocialShareButton =
         throw new Error("You should require social-share-button/wechat to your application.js") unless window.SocialShareWeChatButton
         window.SocialShareWeChatButton.qrcode
           url: url
-          header: title
+          header: $(el).attr('title')
           footer: $(el).data('wechat-footer')
 
       when "tumblr"
