@@ -11,6 +11,7 @@ window.SocialShareButton =
     appkey = $(el).data('appkey') || ''
     $parent = $(el).parent()
     title = encodeURIComponent($(el).data(site + '-title') || $parent.data('title') || '')
+    hashtags = encodeURIComponent($(el).data(site + '-hashtags') || $parent.data('hashtags') || '')
     img = encodeURIComponent($parent.data("img") || '')
     url = encodeURIComponent($parent.data("url") || '')
     via = encodeURIComponent($parent.data("via") || '')
@@ -31,7 +32,7 @@ window.SocialShareButton =
       when "twitter"
         via_str = ''
         via_str = "&via=#{via}" if via.length > 0
-        SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=#{url}&text=#{title}#{via_str}", 650, 300)
+        SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=#{url}&text=#{title}&hashtags=#{hashtags}#{via_str}", 650, 300)
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}&sel=#{desc}", 770, 470)
       when "facebook"
