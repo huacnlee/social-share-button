@@ -1,3 +1,7 @@
+== 0.8.5
+
+* Fix Wechat URL has escaped bug.
+
 == 0.8.4
 
 * Fix share to wechat title.

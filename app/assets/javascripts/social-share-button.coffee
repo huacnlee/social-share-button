@@ -55,7 +55,7 @@ window.SocialShareButton =
       when "wechat"
         throw new Error("You should require social-share-button/wechat to your application.js") unless window.SocialShareWeChatButton
         window.SocialShareWeChatButton.qrcode
-          url: url
+          url: decodeURIComponent(url)
           header: $(el).attr('title')
           footer: $(el).data('wechat-footer')
 
