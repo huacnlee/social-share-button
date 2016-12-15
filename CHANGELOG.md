@@ -1,3 +1,7 @@
+== 0.8.7
+
+* Fix Facebook share title & description (#61)
+
 == 0.8.6
 
 * Allow hashtags param for Twitter (#110)
