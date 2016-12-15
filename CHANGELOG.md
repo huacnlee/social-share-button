@@ -1,3 +1,8 @@
+== 0.8.6
+
+* Allow hashtags param for Twitter (#110)
+* Fix Facebook Share (#108)
+
 == 0.8.5
 
 * Fix Wechat URL has escaped bug.
