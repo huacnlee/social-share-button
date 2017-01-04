@@ -12,9 +12,7 @@ Gem::Specification.new do |s|
   s.description = %q{Helper for add social share feature in your Rails app. Twitter, Facebook, Weibo, Douban, QQ, Tumblr ...}
   s.license     = 'MIT'
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- {bin}/*`.split("\n").map{ |f| File.basename(f) }
+  s.files         = Dir.glob('lib/**/*') + %w(README.md CHANGELOG.md MIT-LICENSE)
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
