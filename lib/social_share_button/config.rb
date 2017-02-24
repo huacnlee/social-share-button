@@ -23,6 +23,7 @@ module SocialShareButton
     # - linkedin
     # - wechat
     # - vkontakte
+    # - odnoklassniki
     # - Xing
     # - reddit
     # - hacker_news
