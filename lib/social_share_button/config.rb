@@ -26,6 +26,7 @@ module SocialShareButton
     # - Xing
     # - reddit
     # - hacker_news
+    # - telegram
     attr_accessor :allow_sites
 
     def initialize
