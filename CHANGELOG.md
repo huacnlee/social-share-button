@@ -3,6 +3,7 @@
 
 * Add Telegram supoort. (#126)
 * Updated reddit icon to use SVG path instead of icon. (#117)
+* Fix del.icio.us URL (#127)
 
 0.8.8
 -----
