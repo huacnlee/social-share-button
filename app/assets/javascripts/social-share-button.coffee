@@ -85,7 +85,6 @@ window.SocialShareButton =
               url = get_tumblr_extra('url') || url
               "name=#{title}&url=#{url}"
 
-
           "/#{path}?#{params}"
 
         SocialShareButton.openUrl("http://www.tumblr.com/share#{tumblr_params()}")
@@ -96,4 +95,6 @@ window.SocialShareButton =
         SocialShareButton.openUrl("http://news.ycombinator.com/submitlink?u=#{url}&t=#{title}", 770, 500)
       when "telegram"
         SocialShareButton.openUrl("https://telegram.me/share/url?text=#{title}&url=#{url}")
+      when "whatsapp"
+        location.href = "whatsapp://send?text=#{url} #{title}"
     false
