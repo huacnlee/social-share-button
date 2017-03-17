@@ -44,7 +44,7 @@ window.SocialShareButton =
       when "google_bookmark"
         SocialShareButton.openUrl("https://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=#{url}&title=#{title}")
       when "delicious"
-        SocialShareButton.openUrl("http://www.delicious.com/save?url=#{url}&title=#{title}&jump=yes&pic=#{img}")
+        SocialShareButton.openUrl("https://del.icio.us/save?url=#{url}&title=#{title}&jump=yes&pic=#{img}")
       when "pinterest"
         SocialShareButton.openUrl("http://www.pinterest.com/pin/create/button/?url=#{url}&media=#{img}&description=#{title}")
       when "linkedin"
@@ -96,4 +96,6 @@ window.SocialShareButton =
         SocialShareButton.openUrl("http://www.reddit.com/submit?url=#{url}&newwindow=1", 555, 400)
       when "hacker_news"
         SocialShareButton.openUrl("http://news.ycombinator.com/submitlink?u=#{url}&t=#{title}", 770, 500)
+      when "telegram"
+        SocialShareButton.openUrl("https://telegram.me/share/url?text=#{title}&url=#{url}")
     false

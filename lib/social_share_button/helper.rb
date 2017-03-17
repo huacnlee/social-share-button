@@ -1,4 +1,3 @@
-# coding: utf-8
 module SocialShareButton
   module Helper
     def social_share_button_tag(title = "", opts = {})

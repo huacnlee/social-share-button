@@ -24,10 +24,11 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Xing
 * Reddit
 * Hacker News
+* Telegram
 
 ## Screenshot
 
-<img width="450" alt="2016-10-05 8 51 07" src="https://cloud.githubusercontent.com/assets/5518/19097657/ea7c0a20-8ad8-11e6-953f-83354d9a6384.png">
+<img width="473" alt="2016-10-05 8 51 07" src="https://cloud.githubusercontent.com/assets/5518/19097657/ea7c0a20-8ad8-11e6-953f-83354d9a6384.png">
 
 ## Install
 
@@ -113,17 +114,18 @@ You can also specify the URL that it links to:
 <%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page", via: "MyTwitterName") %>
 ```
 
-For the Tumblr there are an extra settings, prefixed with :'data-*'
+For the Tumblr there are an extra settings, prefixed with : `data-*`
+
 ```erb
 <%= social_share_button_tag(@post.title, :image => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumblr.png", :'data-type' => 'photo') %>
 <%= social_share_button_tag(@post.title, :'data-source' => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumblr.png", :'data-type' => 'photo') %>
 ```
+
 Those two above calls are identical.
 Here are the mapping of attributes depending on you data-type parameter
 
-<pre>
 | data-type         | standard  | custom :"data-*" prefixed  |
---------------------------------------------------------------
+| ----------------- | --------- | -------------------------- |
 | link (default)    | title     | data-title                 |
 |                   | url       | data-url                   |
 | text              | title     | data-title                 |
@@ -131,7 +133,6 @@ Here are the mapping of attributes depending on you data-type parameter
 |                   | image     | data-source                |
 | quote             | title     | data-quote                 |
 |                   |           | data-source                |
-</pre>
 
 ## How to change icon size?
 
@@ -153,4 +154,4 @@ $size: 24px;
 
 ## Demo
 
-[http://ruby-china.org/wiki/about](http://ruby-china.org/wiki/about)
+[https://ruby-china.org/wiki/about](https://ruby-china.org/wiki/about)
