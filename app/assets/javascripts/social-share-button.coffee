@@ -53,6 +53,8 @@ window.SocialShareButton =
         SocialShareButton.openUrl("https://www.xing.com/spi/shares/new?url=#{url}")
       when "vkontakte"
         SocialShareButton.openUrl("http://vk.com/share.php?url=#{url}&title=#{title}&image=#{img}")
+      when "odnoklassniki"
+        SocialShareButton.openUrl("https://connect.ok.ru/offer?url=#{url}&title=#{title}&description=#{desc}&imageUrl=#{img}")
       when "wechat"
         throw new Error("You should require social-share-button/wechat to your application.js") unless window.SocialShareWeChatButton
         window.SocialShareWeChatButton.qrcode
