@@ -1,3 +1,8 @@
+0.10.0
+------
+
+* Add [Odnoklassniki](https://ok.ru). (#121)
+
 0.9.0
 -----
 
