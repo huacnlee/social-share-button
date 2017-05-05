@@ -98,6 +98,12 @@ Apart from the default title, you can specify the title for the special social n
 <%= social_share_button_tag(@post.title, 'data-twitter-title' => 'TheTitleForTwitter') %>
 ```
 
+To specify sites at runtime:
+
+```erb
+<%= social_share_button_tag(@post.title, :allow_sites => %w(twitter facebook)) %>
+```
+
 And you can custom rel attribute:
 
 ```erb
