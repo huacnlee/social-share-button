@@ -30,7 +30,7 @@ window.SocialShareWeChatButton =
      $wBody.qrcode
        width: 200
        height: 200
-       text: opts.url
+       text: decodeURIComponent(opts.url)
 
      $wContainer = $("#ss-wechat-dialog")
      top = ($(window).height() - $wContainer.height()) / 2
