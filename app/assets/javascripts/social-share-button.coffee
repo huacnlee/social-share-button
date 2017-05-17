@@ -13,8 +13,7 @@ window.SocialShareButton =
     title = encodeURIComponent($(el).data(site + '-title') || $parent.data('title') || '')
     img = encodeURIComponent($parent.data("img") || '')
     url = encodeURIComponent($parent.data("url") || '')
-    via = encodeURIComponent($parent.data("via") || '')
-    desc = encodeURIComponent($parent.data("desc") || ' ')
+    desc = encodeURIComponent($(el).data(site + '-desc') || $parent.data("desc") || ' ')
 
     # tracking click events if google analytics enabled
     ga = window[window['GoogleAnalyticsObject'] || 'ga']
@@ -25,13 +24,13 @@ window.SocialShareButton =
       url = encodeURIComponent(location.href)
     switch site
       when "email"
-        location.href = "mailto:?to=&subject=#{title}&body=#{url}"
+        location.href = "mailto:?to=&subject=#{title}&body=#{desc}%0A%0A#{url}"
       when "weibo"
         SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=#{url}&type=3&pic=#{img}&title=#{title}&appkey=#{appkey}", 620, 370)
       when "twitter"
         hashtags = encodeURIComponent($(el).data(site + '-hashtags') || $parent.data('hashtags') || '')
-        via_str = ''
-        via_str = "&via=#{via}" if via.length > 0
+        via = $parent.data("via")
+        via_str = if via.length > 0 then "&via=#{encodeURIComponent(via)}" else ''
         SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=#{url}&text=#{title}&hashtags=#{hashtags}#{via_str}", 650, 300)
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}&sel=#{desc}", 770, 470)
