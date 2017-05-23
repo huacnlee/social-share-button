@@ -13,6 +13,7 @@ window.SocialShareButton =
     title = encodeURIComponent($(el).data(site + '-title') || $parent.data('title') || '')
     img = encodeURIComponent($parent.data("img") || '')
     url = encodeURIComponent($parent.data("url") || '')
+    picture = encodeURIComponent($parent.data("og:image") || '')
     via = encodeURIComponent($parent.data("via") || '')
     desc = encodeURIComponent($parent.data("desc") || ' ')
 
@@ -36,7 +37,7 @@ window.SocialShareButton =
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}&sel=#{desc}", 770, 470)
       when "facebook"
-        SocialShareButton.openUrl("http://www.facebook.com/sharer/sharer.php?u=#{url}&display=popup&title=#{title}&description=#{desc}", 555, 400)
+        SocialShareButton.openUrl("http://www.facebook.com/sharer/sharer.php?u=#{url}&display=popup&title=#{title}&description=#{desc}&picture=#{picture}", 555, 400)
       when "qq"
         SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}&pics=#{img}&summary=#{desc}&site=#{appkey}")
       when "google_plus"
