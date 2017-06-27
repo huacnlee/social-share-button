@@ -16,11 +16,25 @@ module SocialShareButton
         special_data["data-wechat-footer"] = t "social_share_button.wechat_footer" if name == "wechat"
 
         link_title = t "social_share_button.share_to", :name => t("social_share_button.#{name.downcase}")
-        html << link_to("", "#", { :rel => ["nofollow", rel],
-                                   "data-site" => name,
-                                   :class => "ssb-icon ssb-#{name}",
-                                   :onclick => "return SocialShareButton.share(this);",
-                                   :title => h(link_title) }.merge(extra_data).merge(special_data))
+        link_attributes = {
+          :rel => ["nofollow", rel],
+          "data-site" => name,
+          :class => "ssb-icon ssb-#{name}",
+          :title => h(link_title)
+        }.merge(extra_data).merge(special_data)
+        if name == 'copy'
+          link_attributes['data-clipboard-text'] = opts[:url] || request.original_url
+        else
+          link_attributes[:onclick] = "return SocialShareButton.share(this);"
+        end
+        html << link_to("", "javascript:void(0)", link_attributes)
+        
+        if name == 'copy'
+          html << content_tag(:div, class: 'copy-success') do
+            t('social_share_button.copy_success')
+          end
+        end
+        
       end
       html << "</div>"
       raw html.join("\n")

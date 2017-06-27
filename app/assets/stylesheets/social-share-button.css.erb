@@ -83,6 +83,10 @@
   background-image: url(<%= asset_path('social-share-button/telegram.svg') %>);
 }
 
+.social-share-button .ssb-copy {
+  background-image: url(<%= asset_path('social-share-button/copy.svg') %>);
+}
+
 .ss-wechat-dialog {
   width: 300px;
   position: fixed;
@@ -119,4 +123,16 @@
   text-align: left;
   line-height: 22px;
   color: #666;
+}
+
+.social-share-button .copy-success {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+}
+
+.social-share-button .copy-success.visible {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
 }

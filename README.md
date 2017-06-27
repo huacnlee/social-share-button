@@ -25,6 +25,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Reddit
 * Hacker News
 * Telegram
+* Copy (to clipboard)
 
 ## Screenshot
 
@@ -36,6 +37,7 @@ In your `Gemfile`:
 
 ```ruby
 gem 'social-share-button'
+gem 'clipboard-rails' # if you want copy-to-clipboard
 ```
 
 Old version for IE and lower browser support:
@@ -70,6 +72,7 @@ You need add require css,js file in your app assets files:
 ```
 #= require social-share-button
 #= require social-share-button/wechat # if you need use WeChat
+#= require social-share-button/copy   # if you want copy-to-clipboard
 ```
 
 `app/assets/stylesheets/application.scss`
