@@ -1,3 +1,8 @@
+1.0.0
+-----
+
+- Fix Facebook by use quote in url rather than description (#143)
+
 0.10.0
 ------
 
