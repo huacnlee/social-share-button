@@ -25,6 +25,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Reddit
 * Hacker News
 * Telegram
+* Whatsapp
 
 ## Screenshot
 
@@ -157,6 +158,17 @@ $size: 24px;
   }
 }
 ```
+
+## How does Whatsapp work given it doesn't have a desktop web sharing URL?
+
+Whatsapp sharing URL starts with `whatsapp://send`, not `https://`, which works
+on mobile but not on desktop (unless you have the Whatsapp Desktop app). That
+means it will break for the majority of people on desktop.
+
+To circumvent it, we don't add `whatsapp` by default and leave this decision up
+to you. If you want to add it, add `whatsapp` to the `allow_sites` config
+initializer. Second, we have a CSS rule to hide it on desktop browsers. Feel
+free to override it if you want.
 
 ## Demo
 

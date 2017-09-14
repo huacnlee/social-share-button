@@ -1,20 +1,20 @@
-en:
+pt-BR:
   social_share_button:
-    share_to: Share to %{name}
+    share_to: Compartilhar com %{name}
     weibo: Sina Weibo
     twitter: Twitter
     facebook: Facebook
     douban: Douban
     qq: Qzone
     delicious: Delicious
-    google_plus: Google+
+    google_plus: Google Plus
     google_bookmark: Google Bookmark
     tumblr: Tumblr
     pinterest: Pinterest
     email: Email
     linkedin: Linkedin
     wechat: WeChat
-    wechat_footer: Open your WeChat, click "Discover" button then click the "Scan QR Code" menu.
+    wechat_footer: Abra seu WeChat, clique em "Discover" então clique no menu "Scan QR Code".
     vkontakte: Vkontakte
     odnoklassniki: Odnoklassniki
     xing: Xing

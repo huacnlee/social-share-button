@@ -98,4 +98,11 @@ window.SocialShareButton =
         SocialShareButton.openUrl("http://news.ycombinator.com/submitlink?u=#{url}&t=#{title}", 770, 500)
       when "telegram"
         SocialShareButton.openUrl("https://telegram.me/share/url?text=#{title}&url=#{url}")
+      when "whatsapp"
+        # Using _blank or popup won't work because the URL scheme starts with
+        # whatsapp://, so we have to open it in the same window. Given the
+        # app is present, current solution will automatically open the app so
+        # the current page isn't lost.
+        final_url = "whatsapp://send?text=#{title} #{url}"
+        window.open(final_url, '_top')
     false

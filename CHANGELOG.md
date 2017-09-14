@@ -1,3 +1,8 @@
+Unreleased
+----
+
+- Adds Whatsapp support.
+
 1.0.0
 -----
 

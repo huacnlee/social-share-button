@@ -12,7 +12,7 @@ module SocialShareButton
       opts[:allow_sites].each do |name|
         extra_data = opts.select { |k, _| k.to_s.start_with?('data') } if name.eql?('tumblr')
         special_data = opts.select { |k, _| k.to_s.start_with?('data-' + name) }
-        
+
         special_data["data-wechat-footer"] = t "social_share_button.wechat_footer" if name == "wechat"
 
         link_title = t "social_share_button.share_to", :name => t("social_share_button.#{name.downcase}")
