@@ -1,0 +1,23 @@
+uk:
+  social_share_button:
+    share_to: Поділитись в %{name}
+    weibo: Sina Weibo
+    twitter: Twitter
+    facebook: Facebook
+    douban: Douban
+    qq: Qzone
+    delicious: Delicious
+    google_plus: Google+
+    google_bookmark: Google Bookmark
+    tumblr: Tumblr
+    pinterest: Pinterest
+    email: Email
+    linkedin: Linkedin
+    wechat: WeChat
+    wechat_footer: Відкрийте WeChat, натисніть кнопку "Discover", потім виберіть "Scan QR Code".
+    vkontakte: Вконтакте
+    odnoklassniki: Однокласники
+    xing: Xing
+    reddit: Reddit
+    hacker_news: Hacker News
+    telegram: Telegram

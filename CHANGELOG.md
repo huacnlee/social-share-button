@@ -1,7 +1,14 @@
 Unreleased
-----
+-----
 
 - Adds Whatsapp support.
+
+1.1.0
+-----
+
+- Add German locales (#152)
+- Add Spanish (Castellano) locales (#154)
+- Added Ukrainian and Russian locales (#151)
 
 1.0.0
 -----
