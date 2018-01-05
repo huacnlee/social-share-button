@@ -57,7 +57,7 @@ You can config `config/initializers/social_share_button.rb` to choose which site
 
 ```ruby
 SocialShareButton.configure do |config|
-  config.allow_sites = %w(twitter facebook weibo)
+  config.allow_sites = %w(mail linked twitter facebook google)
 end
 ```
 
@@ -140,6 +140,47 @@ Here are the mapping of attributes depending on you data-type parameter
 | quote             | title     | data-quote                 |
 |                   |           | data-source                |
 
+## More arguments
+#options:
+
+all of the following can be passes as named parameters (options) to the second argument of `social_share_button_tag`
+
+rel
+  *TODO: document*
+
+url
+  *TODO: document*
+
+desc
+  *TODO: document*
+
+child_content
+  WARNING: will be output as raw html; HTML standards recommend you input inline-level elements only
+
+allow_sites
+  override default settings set in base calss
+
+inner_element 
+  defaults to nothing, but can be overridden for other elements. 
+  pass as **element name only without <...> syntax marks**
+  note *each* a tag (href) displayed will wrap a copy of this content, if passed
+  use when you need an additional element as your button, like a font awesome
+  <i class='fa-icon'></i>, etc. 
+  leave as nothing to style fully using the native a href
+  
+self_styled
+  defaults to false; use social share styling for the social icons themselves
+  set to true to use your own social icons
+  
+ 
+self_general_styled
+  defautls to false; use social share general styling
+  set to true to turn off social share's general styling completely 
+
+classes 
+  classes applied to inner_element 
+
+
 ## How to change icon size?
 
 Yes, you can override social-share-button base css to change the icon size.
@@ -157,6 +198,8 @@ $size: 24px;
   }
 }
 ```
+
+Alternatively, pass self_styled to true turn off all social sharing icons and self_general_styled true to off all general styles applied by the gem. 
 
 ## Demo
 
