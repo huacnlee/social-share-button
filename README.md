@@ -154,8 +154,6 @@ url
 desc
   *TODO: document*
 
-child_content
-  WARNING: will be output as raw html; HTML standards recommend you input inline-level elements only
 
 allow_sites
   override default settings set in base calss
@@ -168,14 +166,17 @@ inner_element
   <i class='fa-icon'></i>, etc. 
   leave as nothing to style fully using the native a href
   
-self_styled
-  defaults to false; use social share styling for the social icons themselves
-  set to true to use your own social icons
+font_awesome
+  defaults to false; 
   
+fa_icon_classes (ignored if font_awesome is false)
+  defaults to only 'fa' any addition fa classes passed will be merged with 'fa' and appeneded
+  to the icon classes. pass as string with spaces separating multiple class names
  
-self_general_styled
+self_styled
   defautls to false; use social share general styling
   set to true to turn off social share's general styling completely 
+  automatically set to true for you use if you use font awesome
 
 classes 
   classes applied to inner_element 
@@ -198,8 +199,6 @@ $size: 24px;
   }
 }
 ```
-
-Alternatively, pass self_styled to true turn off all social sharing icons and self_general_styled true to off all general styles applied by the gem. 
 
 ## Demo
 
