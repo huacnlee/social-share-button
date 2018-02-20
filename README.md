@@ -140,6 +140,22 @@ Here are the mapping of attributes depending on you data-type parameter
 | quote             | title     | data-quote                 |
 |                   |           | data-source                |
 
+## Facebook
+
+A couple of gotchas for Facebook only:
+
+### Facebook needs the description added
+
+```
+  <%= social_share_button_tag('Share to Facebook', :url => course_path(@course), desc: @course.name) %>
+```
+This will add the required ```data-desc``` element, and Facebook will then accept the request.
+
+### Testing from localhost will not work
+
+You will need to test from a live site or Facebook will reject it; localhost will not work.
+
+
 ## How to change icon size?
 
 Yes, you can override social-share-button base css to change the icon size.
