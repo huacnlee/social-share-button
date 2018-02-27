@@ -19,7 +19,7 @@ module SocialShareButton
 
       # build html
       html = []
-      html << "<div class='social-share-button#{' self-styled' if self_styled} data-title='#{h title}' data-img='#{opts[:image]}' data-url='#{opts[:url]}' data-desc='#{opts[:desc]}' data-via='#{opts[:via]}'>"
+      html << "<div class='social-share-button#{' self-styled' if self_styled}' data-title='#{h title}' data-img='#{opts[:image]}' data-url='#{opts[:url]}' data-desc='#{opts[:desc]}' data-via='#{opts[:via]}'>"
 
       opts[:allow_sites].each do |name|
         extra_data = opts.select { |k, _| k.to_s.start_with?('data') } if name.eql?('tumblr')
