@@ -98,4 +98,6 @@ window.SocialShareButton =
         SocialShareButton.openUrl("http://news.ycombinator.com/submitlink?u=#{url}&t=#{title}", 770, 500)
       when "telegram"
         SocialShareButton.openUrl("https://telegram.me/share/url?text=#{title}&url=#{url}")
+      when "diaspora"
+        SocialShareButton.openUrl("https://share.diasporafoundation.org/?url=#{url}&title=#{title},das,location=no,links=no,scrollbars=no,toolbar=no,width=620,height=550")
     false
