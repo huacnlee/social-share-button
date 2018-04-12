@@ -148,7 +148,7 @@ A couple of gotchas for Facebook only:
 ### Facebook needs the description added
 
 ```
-  <%= social_share_button_tag('Share to Facebook', :url => course_path(@course), desc: @course.name) %>
+  <%= social_share_button_tag('Share to Facebook', :url => course_url(@course), desc: @course.name) %>
 ```
 This will add the required ```data-desc``` element, and Facebook will then accept the request.
 
