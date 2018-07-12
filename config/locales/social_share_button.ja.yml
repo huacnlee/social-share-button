@@ -1,0 +1,23 @@
+ja:
+  social_share_button:
+    share_to: "%{name}でシェアする"
+    weibo: Sina Weibo
+    twitter: Twitter
+    facebook: Facebook
+    douban: Douban
+    qq: Qzone
+    delicious: Delicious
+    google_plus: Google+
+    google_bookmark: Google Bookmark
+    tumblr: Tumblr
+    pinterest: Pinterest
+    email: Email
+    linkedin: Linkedin
+    wechat: WeChat
+    wechat_footer: WeChatを開き、「発見」ボタンをクリックし、「QRコードのスキャン」をクリックしてください。
+    vkontakte: Vkontakte
+    odnoklassniki: Odnoklassniki
+    xing: Xing
+    reddit: Reddit
+    hacker_news: Hacker News
+    telegram: Telegram
