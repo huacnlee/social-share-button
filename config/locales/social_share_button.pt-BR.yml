@@ -1,6 +1,6 @@
 'pt-BR':
   social_share_button:
-    share_to: Compartir vía %{name}
+    share_to: Compartir via %{name}
     weibo: Sina Weibo
     twitter: Twitter
     facebook: Facebook
