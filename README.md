@@ -62,6 +62,8 @@ SocialShareButton.configure do |config|
 end
 ```
 
+More site names you can visit https://github.com/huacnlee/social-share-button/blob/master/lib/social_share_button/config.rb#L33 to found it.
+
 ## Usage
 
 You need add require css,js file in your app assets files:

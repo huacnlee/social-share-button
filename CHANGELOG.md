@@ -1,3 +1,8 @@
+1.2.0
+-----
+
+- Adds social share on WhatsApp (#170)
+
 1.1.0
 -----
 
