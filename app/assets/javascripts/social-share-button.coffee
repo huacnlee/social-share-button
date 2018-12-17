@@ -7,14 +7,17 @@ window.SocialShareButton =
     false
 
   share : (el) ->
-    site = $(el).data('site')
-    appkey = $(el).data('appkey') || ''
-    $parent = $(el).parent()
-    title = encodeURIComponent($(el).data(site + '-title') || $parent.data('title') || '')
-    img = encodeURIComponent($parent.data("img") || '')
-    url = encodeURIComponent($parent.data("url") || '')
-    via = encodeURIComponent($parent.data("via") || '')
-    desc = encodeURIComponent($parent.data("desc") || ' ')
+    if el.getAttribute == null
+      el = document.querySelector(el)
+
+    site = el.getAttribute("data-site")
+    appkey = el.getAttribute("data-appkey") || ''
+    $parent = el.parentNode
+    title = encodeURIComponent(el.getAttribute("data-" + site + "-title") || $parent.getAttribute('data-title') || '')
+    img = encodeURIComponent($parent.getAttribute("data-img") || '')
+    url = encodeURIComponent($parent.getAttribute("data-url") || '')
+    via = encodeURIComponent($parent.getAttribute("data-via") || '')
+    desc = encodeURIComponent($parent.getAttribute("data-desc") || ' ')
 
     # tracking click events if google analytics enabled
     ga = window[window['GoogleAnalyticsObject'] || 'ga']
@@ -29,7 +32,7 @@ window.SocialShareButton =
       when "weibo"
         SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=#{url}&type=3&pic=#{img}&title=#{title}&appkey=#{appkey}", 620, 370)
       when "twitter"
-        hashtags = encodeURIComponent($(el).data(site + '-hashtags') || $parent.data('hashtags') || '')
+        hashtags = encodeURIComponent(el.getAttribute("data-" + site + "-hashtags") || $parent.getAttribute("data-hashtags") || '')
         via_str = ''
         via_str = "&via=#{via}" if via.length > 0
         SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=#{url}&text=#{title}&hashtags=#{hashtags}#{via_str}", 650, 300)
@@ -59,12 +62,12 @@ window.SocialShareButton =
         throw new Error("You should require social-share-button/wechat to your application.js") unless window.SocialShareWeChatButton
         window.SocialShareWeChatButton.qrcode
           url: decodeURIComponent(url)
-          header: $(el).attr('title')
-          footer: $(el).data('wechat-footer')
+          header: el.getAttribute('title')
+          footer: el.getAttribute("data-wechat-footer")
 
       when "tumblr"
         get_tumblr_extra = (param) ->
-          cutom_data = $(el).attr("data-#{param}")
+          cutom_data = el.getAttribute("data-#{param}")
           encodeURIComponent(cutom_data) if cutom_data
 
         tumblr_params = ->
