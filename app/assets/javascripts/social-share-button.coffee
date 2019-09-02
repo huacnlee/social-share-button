@@ -102,8 +102,8 @@ window.SocialShareButton =
       when "telegram"
         SocialShareButton.openUrl("https://telegram.me/share/url?text=#{title}&url=#{url}")
       when "whatsapp_app"
-        whatsapp_app_url = "whatsapp://send?text=#{title}&url=#{url}"
+        whatsapp_app_url = "whatsapp://send?text=#{title}%0A#{url}"
         window.open(whatsapp_app_url, '_top')
       when "whatsapp_web"
-        SocialShareButton.openUrl("https://web.whatsapp.com/send?text=#{title}&url=#{url}")
+        SocialShareButton.openUrl("https://web.whatsapp.com/send?text=#{title}%0A#{url}")
     false
