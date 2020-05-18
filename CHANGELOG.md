@@ -1,7 +1,13 @@
+1.2.3
+-----
+
+- Fix Facebook share URL. (#188)
+- Fix WhatsApp translate. (#176)
+
 1.2.1
 -----
 
-- Fix WahtsApp share URL (#187)
+- Fix WhatsApp share URL (#187)
 
 1.2.0
 -----
