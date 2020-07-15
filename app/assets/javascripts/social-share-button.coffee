@@ -42,8 +42,6 @@ window.SocialShareButton =
         SocialShareButton.openUrl("http://www.facebook.com/sharer/sharer.php?u=#{url}", 555, 400)
       when "qq"
         SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}&pics=#{img}&summary=#{desc}&site=#{appkey}")
-      when "google_plus"
-        SocialShareButton.openUrl("https://plus.google.com/share?url=#{url}")
       when "google_bookmark"
         SocialShareButton.openUrl("https://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=#{url}&title=#{title}")
       when "delicious"

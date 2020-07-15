@@ -11,7 +11,6 @@ module SocialShareButton
     # * site support:
     # - twitter
     # - facebook
-    # - google_plus
     # - weibo
     # - qq
     # - douban

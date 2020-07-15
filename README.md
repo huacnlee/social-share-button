@@ -9,7 +9,6 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Facebook
 * Twitter
 * Douban
-* Google+
 * Weibo
 * QZone
 * Google Bookmark
