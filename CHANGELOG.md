@@ -1,3 +1,9 @@
+1.2.4
+-----
+
+- Remove to param from email URL
+- Remove google plus (#192)
+
 1.2.3
 -----
 
