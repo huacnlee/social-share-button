@@ -17,6 +17,7 @@ module SocialShareButton
     # - google_bookmark
     # - delicious
     # - tumblr
+    # - line
     # - pinterest
     # - email
     # - linkedin

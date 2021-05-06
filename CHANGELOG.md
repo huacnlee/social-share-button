@@ -1,3 +1,8 @@
+1.2.5
+-----
+
+- Adds social share on LINE messenger
+
 1.2.4
 -----
 

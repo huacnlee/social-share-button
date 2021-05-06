@@ -14,6 +14,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Google Bookmark
 * Delicious
 * Tumblr
+* LINE
 * Pinterest
 * Email
 * LinkedIn
